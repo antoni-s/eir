@@ -18,19 +18,19 @@ class ProdutoController extends Controller
         $paginaSelecionada  = isset($_GET['paginaSelecionada']) ? $_GET['paginaSelecionada'] : 1;
         $totalPorPagina     = 6;
 
-        if(isset($_GET['buscaProduto'])){
+        // if(isset($_GET['buscaProduto'])){
 
             $listaProdutos      = $produtoDAO->buscaComPaginacao($_GET['buscaProduto'], $totalPorPagina, $paginaSelecionada);
 
             $paginacao = new Paginacao($listaProdutos);
-            
+
             self::setViewParam('buscaProduto', $_GET['buscaProduto']);
             self::setViewParam('paginacao', $paginacao->criandoLink($_GET['buscaProduto']));
             self::setViewParam('queryString', Paginacao::criandoQuerystring($_GET['paginaSelecionada'], $_GET['buscaProduto']));
 
             self::setViewParam('listaProdutos'  , $listaProdutos['resultado']);
 
-        }
+        // }
 
         $this->render('/produto/index');
 
@@ -75,15 +75,15 @@ class ProdutoController extends Controller
         }
 
         $produtoDAO->salvar($Produto);
-        
+
         Sessao::limpaFormulario();
         Sessao::limpaMensagem();
         Sessao::limpaErro();
 
         $this->redirect('/produto');
-      
+
     }
-    
+
     public function edicao($params)
     {
         $id = $params[0];
@@ -139,7 +139,7 @@ class ProdutoController extends Controller
             Sessao::gravaErro(['Código EAN já existe.']);
             $this->redirect('/produto/edicao/'.$_POST['id'].'?buscaProduto='.$_GET['buscaProduto'].'&paginaSelecionada='.$_GET['paginaSelecionada']);
         }
-      
+
         $produtoDAO->atualizar($Produto);
 
         Sessao::limpaFormulario();
@@ -149,7 +149,7 @@ class ProdutoController extends Controller
         $this->redirect('/produto/?buscaProduto='.$_GET['buscaProduto']);
 
     }
-    
+
     public function exclusao($params)
     {
         $id = $params[0];

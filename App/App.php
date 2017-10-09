@@ -28,7 +28,6 @@ class App
         define('DB_NAME'        , substr($url_db["path"], 1));
         define('DB_DRIVER'      , "mysql");
 
-
         $this->url();
     }
 
