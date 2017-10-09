@@ -13,7 +13,7 @@ CREATE TABLE unidade
 
 INSERT INTO unidade (nome,dataCadastro) VALUES
 ('Drogaria São José','3334567891011',NOW()),
-('Drogaria Luzia','3334567891013',NOW()),
+('Drogaria Luzia','3334567891013',NOW());
 -- ('Tenis Rua','S','300.10','Unidade','3334567891011','Tenis',NOW()),
 -- ('Tenis Casa','S','600.10','Unidade','3434567891011','Tenis',NOW()),
 -- ('Tenis Futebol','S','400.10','Unidade','3534567891011','Tenis',NOW()),
