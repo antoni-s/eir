@@ -76,18 +76,30 @@ class UnidadeDAO extends BaseDAO
             // $preco          = $unidade->getPreco();
             // $unidade        = $unidade->getUnidade();
             $idu            = $unidade->getIdu();
+            $logradouro     = $unidade->getLogradouro();
+            $bairro         = $unidade->getBairro();
+            $cep            = $unidade->getCep();
+            $cidade         = $unidade->getCidade();
+            $uf             = $unidade->getUf();
+            $complemento    = $unidade->getComplemento();
             // $descricao      = $unidade->getDescricao();
 
             return $this->insert(
                 'unidade',
                 // ":nome,:status,:preco,:unidade,:ean,:descricao",
-                ":nome,:idu",
+                ":nome,:idu,:logradouro,:bairro,:cep,:cidade,:uf,:complemento",
                 [
                     ':nome'=>$nome,
                     // ':status'=>$status,
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
                     ':idu'=>$idu,
+                    ':logradouro'=>$logradouro,
+                    ':bairro'=>$bairro,
+                    ':cep'=>$cep,
+                    ':cidade'=>$cidade,
+                    ':uf'=>$uf,
+                    ':complemento'=>$complemento,
                     // ':descricao'=>$descricao
                 ]
             );
@@ -107,12 +119,19 @@ class UnidadeDAO extends BaseDAO
             // $preco          = $unidade->getPreco();
             // $unidade        = $unidade->getUnidade();
             $idu            = $unidade->getIdu();
+            $logradouro     = $unidade->getLogradouro();
+            $bairro         = $unidade->getBairro();
+            $cep            = $unidade->getCep();
+            $cidade         = $unidade->getCidade();
+            $uf             = $unidade->getUf();
+            $complemento    = $unidade->getComplemento();
             // $descricao      = $unidade->getDescricao();
 
             return $this->update(
                 'unidade',
                 // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
-                "nome = :nome, idu = :idu",
+                "nome = :nome, idu = :idu, logradouro = :logradouro, bairro = :bairro,
+                  cep = :cep, cidade = :cidade, uf = :uf, complemento = :complemento",
                 [
                     ':id'=>$id,
                     ':nome'=>$nome,
@@ -120,6 +139,12 @@ class UnidadeDAO extends BaseDAO
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
                     ':idu'=>$idu,
+                    ':logradouro'=>$logradouro,
+                    ':bairro'=>$bairro,
+                    ':cep'=>$cep,
+                    ':cidade'=>$cidade,
+                    ':uf'=>$uf,
+                    ':complemento'=>$complemento,
                     // ':descricao'=>$descricao,
                 ],
                 "id = :id"

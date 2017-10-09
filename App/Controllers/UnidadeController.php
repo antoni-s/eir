@@ -54,6 +54,12 @@ class UnidadeController extends Controller
         // $Unidade->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Unidade->setUnidade($_POST['unidade']);
         $Unidade->setIdu($_POST['idu']);
+        $Unidade->setLogradouro($_POST['logradouro']);
+        $Unidade->setBairro($_POST['bairro']);
+        $Unidade->setCep($_POST['cep']);
+        $Unidade->setCidade($_POST['cidade']);
+        $Unidade->setUf($_POST['uf']);
+        $Unidade->setComplemento($_POST['complemento']);
         // $Unidade->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);
@@ -117,6 +123,12 @@ class UnidadeController extends Controller
         // $Unidade->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Unidade->setUnidade($_POST['unidade']);
         $Unidade->setIdu($_POST['idu']);
+        $Unidade->setLogradouro($_POST['logradouro']);
+        $Unidade->setBairro($_POST['bairro']);
+        $Unidade->setCep($_POST['cep']);
+        $Unidade->setCidade($_POST['cidade']);
+        $Unidade->setUf($_POST['uf']);
+        $Unidade->setComplemento($_POST['complemento']);
         // $Unidade->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);

@@ -31,6 +31,36 @@ class UnidadeValidador{
             $resultadoValidacao->addErro('idu',"IDU: Este campo não pode ser vazio");
         }
 
+        if(empty($unidade->getLogradouro()))
+        {
+            $resultadoValidacao->addErro('logradouro',"Logradouro: Este campo não pode ser vazio");
+        }
+
+        if(empty($unidade->getBairro()))
+        {
+            $resultadoValidacao->addErro('bairro',"Bairro: Este campo não pode ser vazio");
+        }
+
+        if(empty($unidade->getCep()))
+        {
+            $resultadoValidacao->addErro('cep',"CEP: Este campo não pode ser vazio");
+        }
+
+        if(empty($unidade->getCidade()))
+        {
+            $resultadoValidacao->addErro('cidade',"Cidade: Este campo não pode ser vazio");
+        }
+
+        if(empty($unidade->getUf()))
+        {
+            $resultadoValidacao->addErro('uf',"UF: Este campo não pode ser vazio");
+        }
+
+        if(empty($unidade->getComplemento()))
+        {
+            $resultadoValidacao->addErro('complemento',"Complemento: Este campo não pode ser vazio");
+        }
+
         // if(empty($unidade->getDescricao()))
         // {
         //     $resultadoValidacao->addErro('descricao',"Descrição: Este campo não pode ser vazio");
