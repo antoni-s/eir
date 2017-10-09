@@ -39,7 +39,7 @@ class UnidadeDAO extends BaseDAO
     {
         if($ean) {
             $resultado = $this->select(
-                "SELECT count(*) as total FROM Unidade WHERE ean = '$ean'"
+                "SELECT count(*) as total FROM unidade WHERE ean = '$ean'"
             );
 
             return $resultado->fetch()['total'];
