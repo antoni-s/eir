@@ -49,7 +49,7 @@
                         <?php
                             foreach($viewVar['listaUnidades'] as $unidade) {
                         ?>
-                            <tr class="<?php echo ($unidade->getStatus() == "N") ? "linhaDesativado" : ""; ?>">
+                            <tr>
                                 <td><?php echo $unidade->getNome(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getIdu(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getDataCadastro()->format('d/m/Y'); ?></td>
