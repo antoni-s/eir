@@ -20,8 +20,8 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="ean">EAN</label>
-                    <input type="text" class="form-control" name="ean" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('ean'); ?>" maxlength="13" required>
+                    <label for="idu">IDU</label>
+                    <input type="text" class="form-control" name="idu" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('idu'); ?>" maxlength="13" required>
 
                 </div>
 
