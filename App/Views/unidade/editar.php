@@ -54,7 +54,7 @@
 
                 <div class="form-group">
                     <label for="uf">UF</label>
-                    <select name="unidade" class="form-control">
+                    <select name="uf" class="form-control">
                         <option value="AC"  <?php echo ($viewVar['unidade']->getUf() == "AC") ? "select" : "" ?>>AC</option>
                         <option value="AL"  <?php echo ($viewVar['unidade']->getUf() == "Al") ? "select" : "" ?>>AL</option>
                         <option value="AM"  <?php echo ($viewVar['unidade']->getUf() == "AM") ? "select" : "" ?>>AM</option>
