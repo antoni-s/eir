@@ -1,4 +1,4 @@
-Iduidu<?php
+<?php
 
 namespace App\Models\DAO;
 
@@ -35,11 +35,11 @@ class UnidadeDAO extends BaseDAO
                 'resultado'         => $resultado->fetchAll(\PDO::FETCH_CLASS, Unidade::class)];
 
     }
-    public  function validaIdu($idu)
+    public  function validaEan($ean)
     {
-        if($idu) {
+        if($ean) {
             $resultado = $this->select(
-                "SELECT count(*) as total FROM unidade WHERE idu = '$idu'"
+                "SELECT count(*) as total FROM unidade WHERE ean = '$ean'"
             );
 
             return $resultado->fetch()['total'];
@@ -75,19 +75,19 @@ class UnidadeDAO extends BaseDAO
             // $status         = $unidade->getStatus();
             // $preco          = $unidade->getPreco();
             // $unidade        = $unidade->getUnidade();
-            $idu            = $unidade->getIdu();
+            $ean            = $unidade->getEan();
             // $descricao      = $unidade->getDescricao();
 
             return $this->insert(
                 'unidade',
-                // ":nome,:status,:preco,:unidade,:idu,:descricao",
-                ":nome,:idu",
+                // ":nome,:status,:preco,:unidade,:ean,:descricao",
+                ":nome,:ean",
                 [
                     ':nome'=>$nome,
                     // ':status'=>$status,
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
-                    ':idu'=>$idu,
+                    ':ean'=>$ean,
                     // ':descricao'=>$descricao
                 ]
             );
@@ -106,20 +106,24 @@ class UnidadeDAO extends BaseDAO
             // $status         = $unidade->getStatus();
             // $preco          = $unidade->getPreco();
             // $unidade        = $unidade->getUnidade();
-            $idu            = $unidade->getIdu();
+            $ean            = $unidade->getEan();
             // $descricao      = $unidade->getDescricao();
 
             return $this->update(
                 'unidade',
-                // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, idu = :idu, descricao = :descricao",
-                "nome = :nome, idu = :idu",
+                // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
+                "nome = :nome, ean = :ean",
                 [
                     ':id'=>$id,
                     ':nome'=>$nome,
                     // ':status'=>$status,
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
+<<<<<<< HEAD
                     ':idu'=>$idu,
+=======
+                    ':ean'=>$ean,
+>>>>>>> parent of 3a8c6b2... Atualizar campo de identificação únido de unidades
                     // ':descricao'=>$descricao,
                 ],
                 "id = :id"
