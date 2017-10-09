@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <a href="http://<?php echo APP_HOST; ?>/produto/cadastro" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Adicionar</a>
+            <a href="http://<?php echo APP_HOST; ?>/unidade/cadastro" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Adicionar</a>
         </div>
         <div class="col-md-6">
-            <form action="http://<?php echo APP_HOST; ?>/produto/" method="get" class="form-inline buscaDireita">
+            <form action="http://<?php echo APP_HOST; ?>/unidade/" method="get" class="form-inline buscaDireita">
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon input-sm" id="basic-addon1">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                         </span>
-                        <input type="text" placeholder="Buscar conteúdo" required value="<?php echo $viewVar['buscaProduto']; ?>" class="form-control input-sm" name="buscaProduto" />
+                        <input type="text" placeholder="Buscar conteúdo" required value="<?php echo $viewVar['buscaUnidade']; ?>" class="form-control input-sm" name="buscaUnidade" />
 
                         <div class="input-group-btn">
                         <button class="btn btn-success btn-sm" type="submit">Buscar</button>
@@ -23,9 +23,9 @@
             <hr>
 
             <?php
-                if(!count($viewVar['listaProdutos'])){
+                if(!count($viewVar['listaUnidades'])){
             ?>
-                <div class="alert alert-info" role="alert">Efetue uma busca para exibir o seu produto.</div>
+                <div class="alert alert-info" role="alert">Efetue uma busca para exibir a sua Unidade.</div>
             <?php
                 } else {
             ?>
@@ -39,14 +39,14 @@
                     <table class="table table-bordered table-hover">
                         <tr>
                             <td class="info">Nome</td>
-                            <td class="info hidden-sm hidden-xs">Preço</td>
+                            <!-- <td class="info hidden-sm hidden-xs">Preço</td> -->
                             <td class="info hidden-sm hidden-xs">EAN</td>
-                            <td class="info hidden-sm hidden-xs">Status</td>
+                            <!-- <td class="info hidden-sm hidden-xs">Status</td> -->
                             <td class="info hidden-sm hidden-xs">Data Cadastro</td>
                             <td class="info"></td>
                         </tr>
                         <?php
-                            foreach($viewVar['listaProdutos'] as $produto) {
+                            foreach($viewVar['listaUnidades'] as $unidade) {
                         ?>
                             <tr class="<?php echo ($produto->getStatus() == "N") ? "linhaDesativado" : ""; ?>">
                                 <td><?php echo $produto->getNome(); ?></td>
