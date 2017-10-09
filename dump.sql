@@ -5,7 +5,7 @@ CREATE TABLE unidade
     -- status CHAR(1) NOT NULL DEFAULT 1,
     -- preco DOUBLE(10,2) NOT NULL,
     -- unidade VARCHAR(30) NOT NULL,
-    ean BIGINT NOT NULL,
+    idu BIGINT NOT NULL,
     -- descricao TEXT,
     dataCadastro DATETIME DEFAULT NOW()
 );

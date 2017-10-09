@@ -40,7 +40,7 @@
                         <tr>
                             <td class="info">Nome</td>
                             <!-- <td class="info hidden-sm hidden-xs">Preço</td> -->
-                            <td class="info hidden-sm hidden-xs">EAN</td>
+                            <td class="info hidden-sm hidden-xs">IDU</td>
                             <!-- <td class="info hidden-sm hidden-xs">Status</td> -->
                             <td class="info hidden-sm hidden-xs">Data Cadastro</td>
                             <td class="info"></td>
@@ -50,7 +50,7 @@
                         ?>
                             <tr>
                                 <td><?php echo $unidade->getNome(); ?></td>
-                                <td class=" hidden-sm hidden-xs"><?php echo $unidade->getEan(); ?></td>
+                                <td class=" hidden-sm hidden-xs"><?php echo $unidade->getIdu(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getDataCadastro()->format('d/m/Y'); ?></td>
                                 <td>
                                     <a href="http://<?php echo APP_HOST; ?>/unidade/edicao/<?php echo $unidade->getId(); ?><?php echo $viewVar['queryString']; ?>" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar </a>

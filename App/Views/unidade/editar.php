@@ -23,8 +23,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="ean">EAN</label>
-                    <input type="text"  class="form-control"  name="ean" id="ean" placeholder="" value="<?php echo $viewVar['unidade']->getEan(); ?>" maxlength="13"  required>
+                    <label for="idu">IDU</label>
+                    <input type="text"  class="form-control"  name="idu" id="idu" placeholder="" value="<?php echo $viewVar['unidade']->getIdu(); ?>" maxlength="13"  required>
                 </div>
 
                 <button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Salvar </button>

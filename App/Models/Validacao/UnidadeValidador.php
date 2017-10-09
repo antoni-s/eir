@@ -26,9 +26,9 @@ class UnidadeValidador{
         //     $resultadoValidacao->addErro('unidade',"Unidade: Este campo não pode ser vazio");
         // }
 
-        if(empty($unidade->getEan()))
+        if(empty($unidade->getIdu()))
         {
-            $resultadoValidacao->addErro('ean',"EAN: Este campo não pode ser vazio");
+            $resultadoValidacao->addErro('idu',"IDU: Este campo não pode ser vazio");
         }
 
         // if(empty($unidade->getDescricao()))

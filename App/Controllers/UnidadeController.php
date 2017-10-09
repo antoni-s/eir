@@ -53,7 +53,7 @@ class UnidadeController extends Controller
         // $Unidade->setStatus($_POST['status']);
         // $Unidade->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Unidade->setUnidade($_POST['unidade']);
-        $Unidade->setEan($_POST['ean']);
+        $Unidade->setIdu($_POST['idu']);
         // $Unidade->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);
@@ -68,9 +68,9 @@ class UnidadeController extends Controller
 
         $unidadeDAO = new UnidadeDAO();
 
-        if($unidadeDAO->validaEan($Unidade->getEan()))
+        if($unidadeDAO->validaIdu($Unidade->getIdu()))
         {
-            Sessao::gravaErro(['Código EAN já existe.']);
+            Sessao::gravaErro(['Código IDU já existe.']);
             $this->redirect('/unidade/cadastro');
         }
 
@@ -116,7 +116,7 @@ class UnidadeController extends Controller
         // $Unidade->setStatus($_POST['status']);
         // $Unidade->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Unidade->setUnidade($_POST['unidade']);
-        $Unidade->setEan($_POST['ean']);
+        $Unidade->setIdu($_POST['idu']);
         // $Unidade->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);
@@ -133,10 +133,10 @@ class UnidadeController extends Controller
 
         $UnidadeSelecionado = $unidadeDAO->listar($Unidade->getId());
 
-        if($unidadeDAO->validaEan($Unidade->getEan()) &&
-            ($UnidadeSelecionado->getEan() != $Unidade->getEan()))
+        if($unidadeDAO->validaIdu($Unidade->getIdu()) &&
+            ($UnidadeSelecionado->getIdu() != $Unidade->getIdu()))
         {
-            Sessao::gravaErro(['Código EAN já existe.']);
+            Sessao::gravaErro(['Código IDU já existe.']);
             $this->redirect('/unidade/edicao/'.$_POST['id'].'?buscaUnidade='.$_GET['buscaUnidade'].'&paginaSelecionada='.$_GET['paginaSelecionada']);
         }
 

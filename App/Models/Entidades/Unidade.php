@@ -11,7 +11,7 @@ class Unidade
     // private $preco;
     // private $unidade;
     // private $status;
-    private $ean;
+    private $idu;
     // private $descricao;
     private $dataCadastro;
 
@@ -55,14 +55,14 @@ class Unidade
     //     $this->unidade = $unidade;
     // }
 
-    public function getEan()
+    public function getIdu()
     {
-        return $this->ean;
+        return $this->idu;
     }
 
-    public function setEan($ean)
+    public function setIdu($idu)
     {
-        $this->ean = $ean;
+        $this->ean = $idu;
     }
 
     // public function getDescricao()
