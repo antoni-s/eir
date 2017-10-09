@@ -14,8 +14,8 @@ class UnidadeDAO extends BaseDAO
 
         $inicio = (($paginaSelecionada - 1) * $totalPorPagina);
 
+        // LIKE '%$buscaUnidade%' OR descricao
         $whereBusca = " WHERE nome
-                                LIKE '%$buscaUnidade%' OR descricao
                                 LIKE '%$buscaUnidade%' OR ean = '$buscaUnidade'
                          ";
 
