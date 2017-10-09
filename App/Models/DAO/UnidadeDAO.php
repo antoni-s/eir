@@ -1,4 +1,4 @@
-<?php
+Iduidu<?php
 
 namespace App\Models\DAO;
 
@@ -16,7 +16,7 @@ class UnidadeDAO extends BaseDAO
 
         // LIKE '%$buscaUnidade%' OR descricao
         $whereBusca = " WHERE nome
-                                LIKE '%$buscaUnidade%' OR ean = '$buscaUnidade'
+                                LIKE '%$buscaUnidade%' OR idu = '$buscaUnidade'
                          ";
 
         $resultadoTotal = $this->select(
@@ -35,11 +35,11 @@ class UnidadeDAO extends BaseDAO
                 'resultado'         => $resultado->fetchAll(\PDO::FETCH_CLASS, Unidade::class)];
 
     }
-    public  function validaEan($ean)
+    public  function validaIdu($idu)
     {
-        if($ean) {
+        if($idu) {
             $resultado = $this->select(
-                "SELECT count(*) as total FROM unidade WHERE ean = '$ean'"
+                "SELECT count(*) as total FROM unidade WHERE idu = '$idu'"
             );
 
             return $resultado->fetch()['total'];
@@ -75,19 +75,19 @@ class UnidadeDAO extends BaseDAO
             // $status         = $unidade->getStatus();
             // $preco          = $unidade->getPreco();
             // $unidade        = $unidade->getUnidade();
-            $ean            = $unidade->getEan();
+            $idu            = $unidade->getIdu();
             // $descricao      = $unidade->getDescricao();
 
             return $this->insert(
                 'unidade',
-                // ":nome,:status,:preco,:unidade,:ean,:descricao",
-                ":nome,:ean",
+                // ":nome,:status,:preco,:unidade,:idu,:descricao",
+                ":nome,:idu",
                 [
                     ':nome'=>$nome,
                     // ':status'=>$status,
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
-                    ':ean'=>$ean,
+                    ':idu'=>$idu,
                     // ':descricao'=>$descricao
                 ]
             );
@@ -106,20 +106,20 @@ class UnidadeDAO extends BaseDAO
             // $status         = $unidade->getStatus();
             // $preco          = $unidade->getPreco();
             // $unidade        = $unidade->getUnidade();
-            $ean            = $unidade->getEan();
+            $idu            = $unidade->getIdu();
             // $descricao      = $unidade->getDescricao();
 
             return $this->update(
                 'unidade',
-                // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
-                "nome = :nome, ean = :ean",
+                // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, idu = :idu, descricao = :descricao",
+                "nome = :nome, idu = :idu",
                 [
                     ':id'=>$id,
                     ':nome'=>$nome,
                     // ':status'=>$status,
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
-                    ':ean'=>$ean,
+                    ':idu'=>$idu,
                     // ':descricao'=>$descricao,
                 ],
                 "id = :id"
