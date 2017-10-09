@@ -9,7 +9,7 @@ use App\Models\DAO\UnidadeDAO;
 use App\Models\Entidades\Unidade;
 use App\Models\Validacao\UnidadeValidador;
 
-class ProdutoController extends Controller
+class UnidadeController extends Controller
 {
     public function index($params)
     {
@@ -146,7 +146,7 @@ class ProdutoController extends Controller
         Sessao::limpaMensagem();
         Sessao::limpaErro();
 
-        $this->redirect('/produto/?buscaUnidade='.$_GET['buscaUnidade']);
+        $this->redirect('/unidade/?buscaUnidade='.$_GET['buscaUnidade']);
 
     }
 

@@ -16,11 +16,11 @@ class Paginacao
 
     }
 
-    public function criandoLink($buscaProduto = "")
+    public function criandoLink($buscaUnidade = "")
     {
 
         $quantidadePagina   = ceil( $this->totalLinhas / $this->totalPorPagina );
-        $queryString        = (isset($buscaProduto)) ? "&buscaProduto=$buscaProduto" : "";
+        $queryString        = (isset($buscaUnidade)) ? "&buscaUnidade=$buscaUnidade" : "";
         $primeiraPagina     = 1;
 
 
@@ -29,14 +29,14 @@ class Paginacao
         $html         .= '<ul class="pagination pagination-sm">';
         $desabilita    = ( $this->paginaSelecionada == $primeiraPagina ) ? "disabled" : "";
         $html         .= "<li class='page-item $desabilita '>";
-        $html         .= ( $this->paginaSelecionada == $primeiraPagina ) ? '<a href="#">&laquo; Anterior </a>' : '<a href="http://'. APP_HOST . '/produto/?paginaSelecionada=' . ( $this->paginaSelecionada - 1 ) . $queryString . '">&laquo; Anterior </a>';
+        $html         .= ( $this->paginaSelecionada == $primeiraPagina ) ? '<a href="#">&laquo; Anterior </a>' : '<a href="http://'. APP_HOST . '/unidade/?paginaSelecionada=' . ( $this->paginaSelecionada - 1 ) . $queryString . '">&laquo; Anterior </a>';
         $html         .= '</li>';
 
         $html .= "<li class='page-item active'><a>".$this->paginaSelecionada." de ".$quantidadePagina."</a></li>";
 
         $desabilita    = ( $this->paginaSelecionada == $quantidadePagina ) ? "disabled" : "";
         $html         .= "<li class='page-item  $desabilita  '>";
-        $html         .= ( $this->paginaSelecionada == $quantidadePagina ) ? '<a href="#">Próxima &raquo;</a>' : '<a href="http://'. APP_HOST . '/produto/?paginaSelecionada=' . ( $this->paginaSelecionada + 1 ) . $queryString . '">Próxima &raquo;</a>';
+        $html         .= ( $this->paginaSelecionada == $quantidadePagina ) ? '<a href="#">Próxima &raquo;</a>' : '<a href="http://'. APP_HOST . '/unidade/?paginaSelecionada=' . ( $this->paginaSelecionada + 1 ) . $queryString . '">Próxima &raquo;</a>';
         $html         .= '</li>';
         $html         .= '</ul>';
         $html         .= '</div>';
@@ -45,10 +45,10 @@ class Paginacao
         return $html;
     }
 
-    public static function criandoQuerystring($paginaSelecionada = "", $buscaProduto = "")
+    public static function criandoQuerystring($paginaSelecionada = "", $buscaUnidade = "")
     {
         $queryString  = (!empty($paginaSelecionada)) ? '?paginaSelecionada=' . $paginaSelecionada : '';
-        $queryString .= (!empty($buscaProduto)) ? '&buscaProduto=' . $buscaProduto : '';
+        $queryString .= (!empty($buscaUnidade)) ? '&buscaUnidade=' . $buscaUnidade : '';
 
         return $queryString;
     }
