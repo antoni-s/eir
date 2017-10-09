@@ -16,7 +16,7 @@ class UnidadeDAO extends BaseDAO
 
         // LIKE '%$buscaUnidade%' OR descricao
         $whereBusca = " WHERE nome
-                                LIKE '%$buscaUnidade%' OR idu = '$buscaUnidade'
+                                LIKE '%$buscaUnidade%' OR ean = '$buscaUnidade'
                          ";
 
         $resultadoTotal = $this->select(
@@ -119,11 +119,7 @@ class UnidadeDAO extends BaseDAO
                     // ':status'=>$status,
                     // ':preco'=>$preco,
                     // ':unidade'=>$unidade,
-<<<<<<< HEAD
-                    ':idu'=>$idu,
-=======
                     ':ean'=>$ean,
->>>>>>> parent of 3a8c6b2... Atualizar campo de identificação únido de unidades
                     // ':descricao'=>$descricao,
                 ],
                 "id = :id"
