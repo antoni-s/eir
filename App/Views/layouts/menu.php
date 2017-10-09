@@ -14,11 +14,11 @@
                 <li <?php if($viewVar['nameController'] == "HomeController") { ?> class="active" <?php } ?>>
                     <a href="http://<?php echo APP_HOST; ?>" >Home</a>
                 </li>
-                <li <?php if($viewVar['nameController'] == "ProdutoController" && ($viewVar['nameAction'] == "" || $viewVar['nameAction'] == "index")) { ?> class="active" <?php } ?>>
-                    <a href="http://<?php echo APP_HOST; ?>/produto" >Lista de Produtos</a>
+                <li <?php if($viewVar['nameController'] == "UnidadeController" && ($viewVar['nameAction'] == "" || $viewVar['nameAction'] == "index")) { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/unidade" >Lista de Unidades</a>
                 </li>
-                <li <?php if($viewVar['nameController'] == "ProdutoController" && $viewVar['nameAction'] == "cadastro") { ?> class="active" <?php } ?>>
-                    <a href="http://<?php echo APP_HOST; ?>/produto/cadastro" >Cadastro de Produto</a>
+                <li <?php if($viewVar['nameController'] == "UnidadeController" && $viewVar['nameAction'] == "cadastro") { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/unidade/cadastro" >Cadastro de Unidade</a>
                 </li>
             </ul>
         </div>

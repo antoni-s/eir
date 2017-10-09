@@ -3,7 +3,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
 
-            <h3>Editar Produto</h3>
+            <h3>Editar Unidade</h3>
 
             <?php if($Sessao::retornaErro()){ ?>
                 <div class="alert alert-warning" role="alert">
@@ -14,12 +14,12 @@
                 </div>
             <?php } ?>
 
-            <form action="http://<?php echo APP_HOST; ?>/produto/atualizar/<?php echo $viewVar['queryString']; ?>" method="post" id="form_cadastro">
-                <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $viewVar['produto']->getId(); ?>">
+            <form action="http://<?php echo APP_HOST; ?>/unidade/atualizar/<?php echo $viewVar['queryString']; ?>" method="post" id="form_cadastro">
+                <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $viewVar['unidade']->getId(); ?>">
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text"  class="form-control" name="nome" id="nome" placeholder="" value="<?php echo $viewVar['produto']->getNome(); ?>" required>
+                    <input type="text"  class="form-control" name="nome" id="nome" placeholder="" value="<?php echo $viewVar['unidade']->getNome(); ?>" required>
                 </div>
 
                 <div class="form-group">
