@@ -80,7 +80,7 @@ class UnidadeController extends Controller
         Sessao::limpaMensagem();
         Sessao::limpaErro();
 
-        $this->redirect('/produto');
+        $this->redirect('/unidade');
 
     }
 
