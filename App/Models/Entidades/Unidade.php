@@ -62,7 +62,7 @@ class Unidade
 
     public function setIdu($idu)
     {
-        $this->ean = $idu;
+        $this->idu = $idu;
     }
 
     // public function getDescricao()
