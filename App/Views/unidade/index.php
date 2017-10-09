@@ -52,7 +52,7 @@
                             <tr>
                                 <td><?php echo $unidade->getNome(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getIdu(); ?></td>
-                                <td class=" hidden-sm hidden-xs"><?php echo $unidade->getLogradouro().', '.$unidade->getBairro().' '.$unidade->getComplemento().', '.$unidade->getCidade().', '.$unidade->getUf().', '.$unidade->getCep(); ?></td>
+                                <td class=" hidden-sm hidden-xs"><?php echo $unidade->getLogradouro().', '.$unidade->getBairro().' '.$unidade->getComplemento().', '.$unidade->getCep().', '.$unidade->getCidade().', '.$unidade->getUf(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getDataCadastro()->format('d/m/Y'); ?></td>
                                 <td>
                                     <a href="http://<?php echo APP_HOST; ?>/unidade/edicao/<?php echo $unidade->getId(); ?><?php echo $viewVar['queryString']; ?>" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar </a>
