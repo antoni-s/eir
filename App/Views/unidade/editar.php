@@ -55,33 +55,33 @@
                 <div class="form-group">
                     <label for="uf">UF</label>
                     <select name="uf" class="form-control">
-                        <option value="AC" <?php echo ($viewVar['unidade']->getUf() == "AC") ? "select" : "" ?>>AC</option>
-                        <option value="AL" <?php echo ($viewVar['unidade']->getUf() == "Al") ? "select" : "" ?>>AL</option>
-                        <option value="AM" <?php echo ($viewVar['unidade']->getUf() == "AM") ? "select" : "" ?>>AM</option>
-                        <option value="AP" <?php echo ($viewVar['unidade']->getUf() == "AP") ? "select" : "" ?>>AP</option>
-                        <option value="BA" <?php echo ($viewVar['unidade']->getUf() == "BA") ? "select" : "" ?>>BA</option>
-                        <option value="CE" <?php echo ($viewVar['unidade']->getUf() == "CE") ? "select" : "" ?>>CE</option>
-                        <option value="DF" <?php echo ($viewVar['unidade']->getUf() == "DF") ? "select" : "" ?>>DF</option>
-                        <option value="ES" <?php echo ($viewVar['unidade']->getUf() == "ES") ? "select" : "" ?>>ES</option>
-                        <option value="GO" <?php echo ($viewVar['unidade']->getUf() == "GO") ? "select" : "" ?>>GO</option>
-                        <option value="MA" <?php echo ($viewVar['unidade']->getUf() == "MA") ? "select" : "" ?>>MG</option>
-                        <option value="MG" <?php echo ($viewVar['unidade']->getUf() == "MG") ? "select" : "" ?>>MG</option>
-                        <option value="MS" <?php echo ($viewVar['unidade']->getUf() == "MS") ? "select" : "" ?>>MS</option>
-                        <option value="MT" <?php echo ($viewVar['unidade']->getUf() == "MT") ? "select" : "" ?>>MT</option>
-                        <option value="PA" <?php echo ($viewVar['unidade']->getUf() == "PA") ? "select" : "" ?>>PA</option>
-                        <option value="PB" <?php echo ($viewVar['unidade']->getUf() == "PB") ? "select" : "" ?>>PB</option>
-                        <option value="PE" <?php echo ($viewVar['unidade']->getUf() == "PE") ? "select" : "" ?>>PE</option>
-                        <option value="PI" <?php echo ($viewVar['unidade']->getUf() == "PI") ? "select" : "" ?>>PI</option>
-                        <option value="PR" <?php echo ($viewVar['unidade']->getUf() == "PR") ? "select" : "" ?>>PR</option>
-                        <option value="RJ" <?php echo ($viewVar['unidade']->getUf() == "RJ") ? "select" : "" ?>>RJ</option>
-                        <option value="RN" <?php echo ($viewVar['unidade']->getUf() == "RN") ? "select" : "" ?>>RN</option>
-                        <option value="RO" <?php echo ($viewVar['unidade']->getUf() == "RO") ? "select" : "" ?>>RO</option>
-                        <option value="RR" <?php echo ($viewVar['unidade']->getUf() == "RR") ? "select" : "" ?>>RR</option>
-                        <option value="RS" <?php echo ($viewVar['unidade']->getUf() == "RS") ? "select" : "" ?>>RS</option>
-                        <option value="SC" <?php echo ($viewVar['unidade']->getUf() == "SC") ? "select" : "" ?>>SC</option>
-                        <option value="SE" <?php echo ($viewVar['unidade']->getUf() == "SE") ? "select" : "" ?>>SE</option>
-                        <option value="SP" <?php echo ($viewVar['unidade']->getUf() == "SP") ? "select" : "" ?>>SP</option>
-                        <option value="TO" <?php echo ($viewVar['unidade']->getUf() == "TO") ? "select" : "" ?>>TO</option>
+                        <option value="AC" <?php echo ($viewVar['unidade']->getUf() == "AC") ? "selected" : "" ?>>AC</option>
+                        <option value="AL" <?php echo ($viewVar['unidade']->getUf() == "Al") ? "selected" : "" ?>>AL</option>
+                        <option value="AM" <?php echo ($viewVar['unidade']->getUf() == "AM") ? "selected" : "" ?>>AM</option>
+                        <option value="AP" <?php echo ($viewVar['unidade']->getUf() == "AP") ? "selected" : "" ?>>AP</option>
+                        <option value="BA" <?php echo ($viewVar['unidade']->getUf() == "BA") ? "selected" : "" ?>>BA</option>
+                        <option value="CE" <?php echo ($viewVar['unidade']->getUf() == "CE") ? "selected" : "" ?>>CE</option>
+                        <option value="DF" <?php echo ($viewVar['unidade']->getUf() == "DF") ? "selected" : "" ?>>DF</option>
+                        <option value="ES" <?php echo ($viewVar['unidade']->getUf() == "ES") ? "selected" : "" ?>>ES</option>
+                        <option value="GO" <?php echo ($viewVar['unidade']->getUf() == "GO") ? "selected" : "" ?>>GO</option>
+                        <option value="MA" <?php echo ($viewVar['unidade']->getUf() == "MA") ? "selected" : "" ?>>MG</option>
+                        <option value="MG" <?php echo ($viewVar['unidade']->getUf() == "MG") ? "selected" : "" ?>>MG</option>
+                        <option value="MS" <?php echo ($viewVar['unidade']->getUf() == "MS") ? "selected" : "" ?>>MS</option>
+                        <option value="MT" <?php echo ($viewVar['unidade']->getUf() == "MT") ? "selected" : "" ?>>MT</option>
+                        <option value="PA" <?php echo ($viewVar['unidade']->getUf() == "PA") ? "selected" : "" ?>>PA</option>
+                        <option value="PB" <?php echo ($viewVar['unidade']->getUf() == "PB") ? "selected" : "" ?>>PB</option>
+                        <option value="PE" <?php echo ($viewVar['unidade']->getUf() == "PE") ? "selected" : "" ?>>PE</option>
+                        <option value="PI" <?php echo ($viewVar['unidade']->getUf() == "PI") ? "selected" : "" ?>>PI</option>
+                        <option value="PR" <?php echo ($viewVar['unidade']->getUf() == "PR") ? "selected" : "" ?>>PR</option>
+                        <option value="RJ" <?php echo ($viewVar['unidade']->getUf() == "RJ") ? "selected" : "" ?>>RJ</option>
+                        <option value="RN" <?php echo ($viewVar['unidade']->getUf() == "RN") ? "selected" : "" ?>>RN</option>
+                        <option value="RO" <?php echo ($viewVar['unidade']->getUf() == "RO") ? "selected" : "" ?>>RO</option>
+                        <option value="RR" <?php echo ($viewVar['unidade']->getUf() == "RR") ? "selected" : "" ?>>RR</option>
+                        <option value="RS" <?php echo ($viewVar['unidade']->getUf() == "RS") ? "selected" : "" ?>>RS</option>
+                        <option value="SC" <?php echo ($viewVar['unidade']->getUf() == "SC") ? "selected" : "" ?>>SC</option>
+                        <option value="SE" <?php echo ($viewVar['unidade']->getUf() == "SE") ? "selected" : "" ?>>SE</option>
+                        <option value="SP" <?php echo ($viewVar['unidade']->getUf() == "SP") ? "selected" : "" ?>>SP</option>
+                        <option value="TO" <?php echo ($viewVar['unidade']->getUf() == "TO") ? "selected" : "" ?>>TO</option>
 
                     </select>
                 </div>
