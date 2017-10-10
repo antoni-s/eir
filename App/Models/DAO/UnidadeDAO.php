@@ -79,6 +79,8 @@ class UnidadeDAO extends BaseDAO
             $logradouro     = $unidade->getLogradouro();
             $bairro         = $unidade->getBairro();
             $cep            = $unidade->getCep();
+            $cep            = explode("-", $cep);
+            $cep            = $cep[0].$cep[1];
             $cidade         = $unidade->getCidade();
             $uf             = $unidade->getUf();
             $complemento    = $unidade->getComplemento();
@@ -122,6 +124,8 @@ class UnidadeDAO extends BaseDAO
             $logradouro     = $unidade->getLogradouro();
             $bairro         = $unidade->getBairro();
             $cep            = $unidade->getCep();
+            $cep            = explode("-", $cep);
+            $cep            = $cep[0].$cep[1];
             $cidade         = $unidade->getCidade();
             $uf             = $unidade->getUf();
             $complemento    = $unidade->getComplemento();
