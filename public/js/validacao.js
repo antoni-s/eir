@@ -1,17 +1,30 @@
 $(document).ready(function() {
+    $("input[name='cep']").mask("99999-999");
     $('#form_cadastro').validate({
         rules: {
             nome: {
                 required: true
             },
-            preco: {
+            idu: {
+                required: true
+            },
+            logradouro: {
+                required: true
+            },
+            bairro: {
+                required: true
+            },
+            complemento: {
+                required: true
+            },
+            cep: {
                 required: true,
                 maxlength: false
             },
-            ean: {
+            cidade: {
                 required: true
             },
-            descricao: {
+            uf: {
                 required: true
             }
         },
@@ -34,13 +47,22 @@ $(document).ready(function() {
             nome: {
                 required: "Este campo não pode ser vazio"
             },
-            preco: {
+            logradouro: {
                 required: "Este campo não pode ser vazio",
             },
-            quantidade: {
+            bairro: {
                 required: "Este campo não pode ser vazio",
             },
-            descricao: {
+            complemento: {
+                required: "Este campo não pode ser vazio",
+            },
+            cidade: {
+                required: "Este campo não pode ser vazio",
+            },
+            uf: {
+                required: "Este campo não pode ser vazio",
+            },
+            cep: {
                 required: "Este campo não pode ser vazio",
             }
         }

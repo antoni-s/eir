@@ -196,7 +196,7 @@ class UnidadeController extends Controller
             $this->redirect('/unidade');
         }
 
-        Sessao::gravaMensagem("Unidade excluido com sucesso!");
+        Sessao::gravaMensagem("Unidade excluida com sucesso!");
 
         $this->redirect('/unidade/');
 

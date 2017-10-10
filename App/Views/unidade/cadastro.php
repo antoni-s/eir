@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group">
                     <label for="cep">CEP</label>
-                    <input type="text" class="form-control" name="cep" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('cep'); ?>" required>
+                    <input type="text" class="form-control" name="cep" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('cep'); ?>" maxlength="8" required>
 
                 </div>
                 <div class="form-group">

@@ -24,7 +24,7 @@
 
                 <div class="form-group">
                     <label for="idu">IDU</label>
-                    <input type="text"  class="form-control"  name="idu" id="idu" placeholder="" value="<?php echo $viewVar['unidade']->getIdu(); ?>" maxlength="13"  required>
+                    <input type="text"  class="form-control"  name="idu" id="idu" placeholder="" value="<?php echo $viewVar['unidade']->getIdu(); ?>" maxlength="13" required>
                 </div>
 
                 <div class="form-group">
@@ -44,7 +44,7 @@
 
                 <div class="form-group">
                     <label for="cep">CEP</label>
-                    <input type="text"  class="form-control"  name="cep" id="cep" placeholder="" value="<?php echo $viewVar['unidade']->getCep(); ?>" required>
+                    <input type="text"  class="form-control"  name="cep" id="cep" placeholder="" value="<?php echo $viewVar['unidade']->getCep(); ?>" maxlength="8" required>
                 </div>
 
                 <div class="form-group">
