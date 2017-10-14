@@ -4,8 +4,7 @@
     "psr-4": {
         "App\\": "App"
     }
-  }
-
+  },
   "prefer-stable": true,
     "require": {
         "php": "^5.6 || ^7.0",
@@ -21,17 +20,16 @@
         "ext-mbstring": "*",
         "ext-xml": "*",
         "ext-libxml": "*"
-},
-  "files": [
-            "App/Controllers/Controller.php",
-            "App/Controllers/HomeController.php",
-            "App/Controllers/UnidadeController.php",
-            "App/Lib/Conexao.php",
-            "App/Lib/ConversorMonetario.php",
-            "App/Lib/Erro.php",
-            "App/Lib/Paginacao.php",
-            "App/Lib/Sessao.php",
-            "tests/_files/Classes.php"
-]
-
+    },
+    "files": [
+        "App/Controllers/Controller.php",
+        "App/Controllers/HomeController.php",
+        "App/Controllers/UnidadeController.php",
+         "App/Lib/Conexao.php",
+         "App/Lib/ConversorMonetario.php",
+         "App/Lib/Erro.php",
+         "App/Lib/Paginacao.php",
+         "App/Lib/Sessao.php",
+         "tests/_files/Classes.php"
+    ]
 }
