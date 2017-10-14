@@ -1,7 +1,37 @@
 {
+  "name": "eir/eir"
   "autoload": {
     "psr-4": {
         "App\\": "App"
     }
   }
+
+  "prefer-stable": true,
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "phpunit/php-file-iterator": "~1.4",
+        "phpunit/php-text-template": "~1.2",
+        "phpunit/php-code-coverage": "^4.0.4",
+        "phpunit/php-timer": "^1.0.6",
+        "phpunit/phpunit-mock-objects": "^3.2",
+        "phpspec/prophecy": "^1.6.2",
+        "symfony/yaml": "~2.1|~3.0",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-libxml": "*"
+},
+  "files": [
+            "App/Controllers/Controller.php",
+            "App/Controllers/HomeController.php",
+            "App/Controllers/UnidadeController.php",
+            "App/Lib/Conexao.php",
+            "App/Lib/ConversorMonetario.php",
+            "App/Lib/Erro.php",
+            "App/Lib/Paginacao.php",
+            "App/Lib/Sessao.php",
+            "tests/_files/Classes.php"
+]
+
 }
