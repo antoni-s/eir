@@ -1,20 +1,20 @@
 $(document).ready(function() {
     $("input[name='cep']").mask("99999-999");
 
-    JQuery.validator.addMethod("verificaHorario", function(value, element) {
-      var horaAbertura = $("input[name='horaAbertura']").val();
-      var horaFechamento = value;
-      horaAbertura = horaAbertura.split(":");
-      horaAbertura = horaAbertura[0] + horaAbertura[1];
-      horaFechamento = horaFechamento.split(":");
-      horaFechamento = horaFechamento[0] + horaFechamento[1];
-
-      horaAbertura = parseInt(horaAbertura);
-      horaFechamento = parseInt(horaFechamento);
-
-      return horaFechamento > horaAbertura;
-
-    }, "Horário de Fechamento menor que o Horário de Abertura");
+    // JQuery.validator.addMethod("verificaHorario", function(value, element) {
+    //   var horaAbertura = $("input[name='horaAbertura']").val();
+    //   var horaFechamento = value;
+    //   horaAbertura = horaAbertura.split(":");
+    //   horaAbertura = horaAbertura[0] + horaAbertura[1];
+    //   horaFechamento = horaFechamento.split(":");
+    //   horaFechamento = horaFechamento[0] + horaFechamento[1];
+    //
+    //   horaAbertura = parseInt(horaAbertura);
+    //   horaFechamento = parseInt(horaFechamento);
+    //
+    //   return horaFechamento > horaAbertura;
+    //
+    // }, "Horário de Fechamento menor que o Horário de Abertura");
 
     $('#form_cadastro').validate({
         rules: {
@@ -28,7 +28,6 @@ $(document).ready(function() {
                 required: true
             },
             horaFechamento: {
-                // verificaHorario: true,
                 required: true
             },
             logradouro: {
@@ -68,34 +67,34 @@ $(document).ready(function() {
         },
         messages: {
             nome: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             idu: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             horaAbertura: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             horaFechamento: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             logradouro: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             bairro: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             complemento: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             cidade: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             uf: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             },
             cep: {
-                required: "Este campo não pode ser vazio",
+                required: "Este campo não pode ser vazio"
             }
         }
     });
