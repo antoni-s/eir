@@ -29,12 +29,12 @@ $(document).ready(function() {
             idu: {
                 required: true
             },
-            horaAbertura: {
-                required: true
-            },
-            horaFechamento: {
-                required: true
-            },
+            // horaAbertura: {
+            //     required: true
+            // },
+            // horaFechamento: {
+            //     required: true
+            // },
             logradouro: {
                 required: true
             },
@@ -77,12 +77,12 @@ $(document).ready(function() {
             idu: {
                 required: "Este campo não pode ser vazio",
             },
-            horaAbertura: {
-                required: "Este campo não pode ser vazio",
-            },
-            horaFechamento: {
-                required: "Este campo não pode ser vazio",
-            },
+            // horaAbertura: {
+            //     required: "Este campo não pode ser vazio",
+            // },
+            // horaFechamento: {
+            //     required: "Este campo não pode ser vazio",
+            // },
             logradouro: {
                 required: "Este campo não pode ser vazio",
             },
