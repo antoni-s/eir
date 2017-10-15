@@ -200,6 +200,7 @@ $(document).ready(function() {
 
     jQuery.extend(jQuery.validator.messages, {
         number: "Entre com um número válido.",
+        email: "Por favor, forneça um endereço de email válido.",
         maxlength: "Não insira mais do que {0} caracteres"
     });
 });
