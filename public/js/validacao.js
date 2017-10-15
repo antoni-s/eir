@@ -2,17 +2,18 @@ $(document).ready(function() {
     $("input[name='cep']").mask("99999-999");
 
     $.validator.addMethod('verificaHorario', function(value, element) {
-      var horaAbertura = $("input[name='horaAbertura']").val();
-      var horaFechamento = value;
-      horaAbertura = horaAbertura.split(":");
-      horaAbertura = horaAbertura[0] + horaAbertura[1];
-      horaFechamento = horaFechamento.split(":");
-      horaFechamento = horaFechamento[0] + horaFechamento[1];
-
-      horaAbertura = parseInt(horaAbertura);
-      horaFechamento = parseInt(horaFechamento);
-
-      return horaFechamento > horaAbertura;
+      return parseInt(value) % 5 == 0;
+      // var horaAbertura = $("input[name='horaAbertura']").val();
+      // var horaFechamento = value;
+      // horaAbertura = horaAbertura.split(":");
+      // horaAbertura = horaAbertura[0] + horaAbertura[1];
+      // horaFechamento = horaFechamento.split(":");
+      // horaFechamento = horaFechamento[0] + horaFechamento[1];
+      //
+      // horaAbertura = parseInt(horaAbertura);
+      // horaFechamento = parseInt(horaFechamento);
+      //
+      // return horaFechamento > horaAbertura;
 
     }, 'Horário de Fechamento menor que o Horário de Abertura');
 
@@ -22,14 +23,14 @@ $(document).ready(function() {
                 required: true
             },
             idu: {
-                required: true
+                required: true,
+                verificaHorario: true
             },
             horaAbertura: {
                 required: true
             },
             horaFechamento: {
-                required: true,
-                verificaHorario: true
+                required: true
             }
             logradouro: {
                 required: true
