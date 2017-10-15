@@ -6,6 +6,8 @@ CREATE TABLE unidade
     -- preco DOUBLE(10,2) NOT NULL,
     -- unidade VARCHAR(30) NOT NULL,
     idu BIGINT NOT NULL,
+    horaAbertura TIME NOT NULL,
+    horaFechamento TIME NOT NULL,
     -- descricao TEXT,
     logradouro VARCHAR(100) NOT NULL,
     bairro VARCHAR(100) NOT NULL,
@@ -17,9 +19,9 @@ CREATE TABLE unidade
 );
 
 
-INSERT INTO unidade (nome,idu,logradouro,bairro,cep,cidade,uf,complemento,dataCadastro) VALUES
-('Drogaria São José','3334567891011','Rua J','Itapoã','74940510','Aparecida de Goiânia','GO','Vazio',NOW()),
-('Drogaria José','3334567891010','Rua M','Itapoã','74940521','Aparecida de Goiânia','GO','Vazio',NOW());
+INSERT INTO unidade (nome,idu,horaAbertura,horaFechamento,logradouro,bairro,cep,cidade,uf,complemento,dataCadastro) VALUES
+('Drogaria São José','3334567891011','07:30','18:00','Rua J','Itapoã','74940510','Aparecida de Goiânia','GO','Vazio',NOW()),
+('Drogaria José','3334567891010','09:30','20:00','Rua M','Itapoã','74940521','Aparecida de Goiânia','GO','Vazio',NOW());
 -- ('Tenis Rua','S','300.10','Unidade','3334567891011','Tenis',NOW()),
 -- ('Tenis Casa','S','600.10','Unidade','3434567891011','Tenis',NOW()),
 -- ('Tenis Futebol','S','400.10','Unidade','3534567891011','Tenis',NOW()),

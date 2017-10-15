@@ -84,12 +84,15 @@ class UnidadeDAO extends BaseDAO
             $cidade         = $unidade->getCidade();
             $uf             = $unidade->getUf();
             $complemento    = $unidade->getComplemento();
+            $horaAbertura   = $unidade->getHoraAbertura();
+            $horaFechamento = $unidade->getHoraFechamento();
             // $descricao      = $unidade->getDescricao();
 
             return $this->insert(
                 'unidade',
                 // ":nome,:status,:preco,:unidade,:ean,:descricao",
-                ":nome,:idu,:logradouro,:bairro,:cep,:cidade,:uf,:complemento",
+                ":nome,:idu,:logradouro,:bairro,:cep,:cidade,:uf,:complemento,
+                :horaAbertura,:horaFechamento",
                 [
                     ':nome'=>$nome,
                     // ':status'=>$status,
@@ -102,6 +105,8 @@ class UnidadeDAO extends BaseDAO
                     ':cidade'=>$cidade,
                     ':uf'=>$uf,
                     ':complemento'=>$complemento,
+                    ':horaAbertura'=>$horaAbertura,
+                    ':horaFechamento'=>$horaFechamento,
                     // ':descricao'=>$descricao
                 ]
             );
@@ -129,13 +134,16 @@ class UnidadeDAO extends BaseDAO
             $cidade         = $unidade->getCidade();
             $uf             = $unidade->getUf();
             $complemento    = $unidade->getComplemento();
+            $horaAbertura   = $unidade->getHoraAbertura();
+            $horaFechamento = $unidade->getHoraFechamento();
             // $descricao      = $unidade->getDescricao();
 
             return $this->update(
                 'unidade',
                 // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
                 "nome = :nome, idu = :idu, logradouro = :logradouro, bairro = :bairro,
-                  cep = :cep, cidade = :cidade, uf = :uf, complemento = :complemento",
+                  cep = :cep, cidade = :cidade, uf = :uf, complemento = :complemento,
+                  horaAbertura = :horaAbertura, horaFechamento = :horaFechamento",
                 [
                     ':id'=>$id,
                     ':nome'=>$nome,
@@ -149,6 +157,8 @@ class UnidadeDAO extends BaseDAO
                     ':cidade'=>$cidade,
                     ':uf'=>$uf,
                     ':complemento'=>$complemento,
+                    ':horaAbertura'=>$horaAbertura,
+                    ':horaFechamento'=>$horaFechamento,
                     // ':descricao'=>$descricao,
                 ],
                 "id = :id"

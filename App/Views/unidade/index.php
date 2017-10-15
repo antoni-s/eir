@@ -41,6 +41,7 @@
                             <td class="info">Nome</td>
                             <!-- <td class="info hidden-sm hidden-xs">Preço</td> -->
                             <td class="info hidden-sm hidden-xs">IDU</td>
+                            <td class="info hidden-sm hidden-xs">Horário de Funcionamento</td>
                             <td class="info hidden-sm hidden-xs">Endereço</td>
                             <!-- <td class="info hidden-sm hidden-xs">Status</td> -->
                             <td class="info hidden-sm hidden-xs">Data Cadastro</td>
@@ -52,6 +53,7 @@
                             <tr>
                                 <td><?php echo $unidade->getNome(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getIdu(); ?></td>
+                                <td class=" hidden-sm hidden-xs"><?php echo $unidade->getHoraAbertura().' - '.$unidade->getHoraFechamento(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getLogradouro().', '.$unidade->getBairro().', '.$unidade->getComplemento().', '.$unidade->getCep().', '.$unidade->getCidade().', '.$unidade->getUf(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $unidade->getDataCadastro()->format('d/m/Y'); ?></td>
                                 <td>

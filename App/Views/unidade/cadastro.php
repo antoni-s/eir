@@ -25,6 +25,16 @@
 
                 </div>
                 <div class="form-group">
+                    <label for="horaAbertura">Hoário de Abertura</label>
+                    <input type="time" class="form-control"  name="horaAbertura" placeholder="08:00" value="<?php echo $Sessao::retornaValorFormulario('horaAbertura'); ?>" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="horaFechamento">Hoário de Fechamento</label>
+                    <input type="time" class="form-control"  name="horaFechamento" placeholder="18:00" value="<?php echo $Sessao::retornaValorFormulario('horaFechamento'); ?>" required>
+
+                </div>
+                <div class="form-group">
                     <label for="logradouro">Logradouro</label>
                     <input type="text" class="form-control" name="logradouro" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('logradouro'); ?>" required>
 

@@ -28,6 +28,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="horaAbertura">Horário de Abertura</label>
+                    <input type="time"  class="form-control" name="horaAbertura" id="horaAbertura" placeholder="" value="<?php echo $viewVar['unidade']->getHoraAbertura(); ?>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="horaFechamento">Horário de Fechamento</label>
+                    <input type="time"  class="form-control" name="horaFechamento" id="horaFechamento" placeholder="" value="<?php echo $viewVar['unidade']->getHoraFechamento(); ?>" required>
+                </div>
+
+                <div class="form-group">
                     <label for="logradouro">Logradouro</label>
                     <input type="text"  class="form-control"  name="logradouro" id="logradouro" placeholder="" value="<?php echo $viewVar['unidade']->getLogradouro(); ?>" required>
                 </div>

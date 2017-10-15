@@ -60,6 +60,8 @@ class UnidadeController extends Controller
         $Unidade->setCidade($_POST['cidade']);
         $Unidade->setUf($_POST['uf']);
         $Unidade->setComplemento($_POST['complemento']);
+        $Unidade->setHoraAbertura($_POST['horaAbertura']);
+        $Unidade->setHoraFechamento($_POST['horaFechamento']);
         // $Unidade->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);
@@ -129,6 +131,8 @@ class UnidadeController extends Controller
         $Unidade->setCidade($_POST['cidade']);
         $Unidade->setUf($_POST['uf']);
         $Unidade->setComplemento($_POST['complemento']);
+        $Unidade->setHoraAbertura($_POST['horaAbertura']);
+        $Unidade->setHoraFechamento($_POST['horaFechamento']);
         // $Unidade->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);

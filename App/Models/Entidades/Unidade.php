@@ -19,6 +19,8 @@ class Unidade
     private $cidade;
     private $uf;
     private $complemento;
+    private $horaAbertura
+    private $horaFechamento
     private $dataCadastro;
 
     public function getId()
@@ -129,6 +131,26 @@ class Unidade
     public function setComplemento($complemento)
     {
         $this->complemento = $complemento;
+    }
+
+    public function getHoraAbertura()
+    {
+        return $this->horaAbertura;
+    }
+
+    public function setHoraAbertura($horaAbertura)
+    {
+        $this->horaAbertura = $horaAbertura;
+    }
+
+    public function getHoraFechamento()
+    {
+        return $this->horaFechamento;
+    }
+
+    public function setHoraFechamento($horaFechamento)
+    {
+        $this->horaFechamento = $horaFechamento;
     }
 
     // public function getDescricao()

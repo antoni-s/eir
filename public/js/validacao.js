@@ -26,6 +26,12 @@ $(document).ready(function() {
             },
             uf: {
                 required: true
+            },
+            horaAbertura: {
+                required: true
+            },
+            horaFechamento: {
+                required: true
             }
         },
         highlight: function(element) {
@@ -47,6 +53,9 @@ $(document).ready(function() {
             nome: {
                 required: "Este campo não pode ser vazio"
             },
+            idu: {
+                required: "Este campo não pode ser vazio",
+            },
             logradouro: {
                 required: "Este campo não pode ser vazio",
             },
@@ -63,6 +72,12 @@ $(document).ready(function() {
                 required: "Este campo não pode ser vazio",
             },
             cep: {
+                required: "Este campo não pode ser vazio",
+            },
+            horaAbertura: {
+                required: "Este campo não pode ser vazio",
+            },
+            horaFechamento: {
                 required: "Este campo não pode ser vazio",
             }
         }

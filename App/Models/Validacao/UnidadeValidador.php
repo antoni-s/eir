@@ -61,6 +61,16 @@ class UnidadeValidador{
             $resultadoValidacao->addErro('complemento',"Complemento: Este campo não pode ser vazio");
         }
 
+        if(empty($unidade->getHoraAbertura()))
+        {
+            $resultadoValidacao->addErro('horaAbertura',"Horário de Abertura: Este campo não pode ser vazio");
+        }
+
+        if(empty($unidade->getHoraFechamento()))
+        {
+            $resultadoValidacao->addErro('horaFechamento',"Horário de Fechamento: Este campo não pode ser vazio");
+        }
+
         // if(empty($unidade->getDescricao()))
         // {
         //     $resultadoValidacao->addErro('descricao',"Descrição: Este campo não pode ser vazio");
