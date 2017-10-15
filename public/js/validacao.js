@@ -2,8 +2,11 @@ $(document).ready(function() {
     $("input[name='cep']").mask("99999-999");
 
     $.validator.addMethod('verificaHorario', function(value, element) {
-      alert(value);
-      return parseInt(value) % 5 == 0;
+      if(parseInt(value) == 5) {
+        return true;
+      } else {
+        return false;
+      }
       // var horaAbertura = $("input[name='horaAbertura']").val();
       // var horaFechamento = value;
       // horaAbertura = horaAbertura.split(":");
@@ -24,8 +27,8 @@ $(document).ready(function() {
                 required: true
             },
             idu: {
-                required: true,
-                verificaHorario: true
+                verificaHorario: true,
+                required: true
             },
             horaAbertura: {
                 required: true
