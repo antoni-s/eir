@@ -68,6 +68,7 @@ class AtendenteController extends Controller
         // $Atendente->setAtendente($_POST['atendente']);
         $Atendente->setCpf($_POST['cpf']);
         $Atendente->setMatricula($_POST['matricula']);
+        $Atendente->setUnidade($_POST['unidade']);
         $Atendente->setLogradouro($_POST['logradouro']);
         $Atendente->setBairro($_POST['bairro']);
         $Atendente->setCep($_POST['cep']);
@@ -144,6 +145,7 @@ class AtendenteController extends Controller
         // $Atendente->setAtendente($_POST['atendente']);
         $Atendente->setCpf($_POST['cpf']);
         $Atendente->setMatricula($_POST['matricula']);
+        $Atendente->setUnidade($_POST['unidade']);
         $Atendente->setLogradouro($_POST['logradouro']);
         $Atendente->setBairro($_POST['bairro']);
         $Atendente->setCep($_POST['cep']);
