@@ -14,7 +14,7 @@
                 </div>
             <?php } ?>
 
-            <form action="http://<?php echo APP_HOST; ?>/atendente/excluir" method="post" id="form_cadastro">
+            <form action="http://<?php echo APP_HOST; ?>/atendente/excluir" method="post" id="form_cadastro_atendente">
                 <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $viewVar['atendente']->getId(); ?>">
 
                 <div class="panel panel-danger">

@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     }, "Horário de Fechamento menor que o Horário de Abertura");
 
-    $('#form_cadastro').validate({
+    $('#form_cadastro_unidade').validate({
         rules: {
             nome: {
                 required: true

@@ -13,7 +13,7 @@
                 </div>
             <?php } ?>
 
-            <form action="http://<?php echo APP_HOST; ?>/unidade/salvar" method="post" id="form_cadastro">
+            <form action="http://<?php echo APP_HOST; ?>/unidade/salvar" method="post" id="form_cadastro_unidade">
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control"  name="nome" placeholder="Nome da Unidade" value="<?php echo $Sessao::retornaValorFormulario('nome'); ?>" required>
