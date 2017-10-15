@@ -74,6 +74,7 @@ class AtendenteDAO extends BaseDAO
             $nome           = $atendente->getNome();
             $cpf            = $atendente->getCpf();
             $matricula      = $atendente->getMatricula();
+            $unidade        = $atendente->getUnidade();
             $logradouro     = $atendente->getLogradouro();
             $bairro         = $atendente->getBairro();
             $cep            = $atendente->getCep();
@@ -88,7 +89,7 @@ class AtendenteDAO extends BaseDAO
             return $this->insert(
                 'atendente',
                 // ":nome,:status,:preco,:unidade,:ean,:descricao",
-                ":nome,:cpf,:matricula,:logradouro,:bairro,:cep,:cidade,:uf,:complemento,
+                ":nome,:cpf,:matricula,:unidade,:logradouro,:bairro,:cep,:cidade,:uf,:complemento,
                 :telefone,:email",
                 [
                     ':nome'=>$nome,
@@ -97,6 +98,7 @@ class AtendenteDAO extends BaseDAO
                     // ':unidade'=>$atendente,
                     ':cpf'=>$cpf,
                     ':matricula'=>$matricula,
+                    ':unidade'=>$unidade,
                     ':logradouro'=>$logradouro,
                     ':bairro'=>$bairro,
                     ':cep'=>$cep,
@@ -125,6 +127,7 @@ class AtendenteDAO extends BaseDAO
             // $unidade        = $unidade->getUnidade();
             $cpf            = $atendente->getCpf();
             $matricula      = $atendente->getMatricula();
+            $unidade        = $atendente->getUnidade();
             $logradouro     = $atendente->getLogradouro();
             $bairro         = $atendente->getBairro();
             $cep            = $atendente->getCep();
@@ -140,7 +143,7 @@ class AtendenteDAO extends BaseDAO
             return $this->update(
                 'atendente',
                 // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
-                "nome = :nome, cpf = :cpf, matricula = :matricula,
+                "nome = :nome, cpf = :cpf, matricula = :matricula, unidade = :unidade,
                   logradouro = :logradouro, bairro = :bairro, cep = :cep,
                   cidade = :cidade, uf = :uf, complemento = :complemento,
                   telefone = :telefone, email = :email",
@@ -152,6 +155,7 @@ class AtendenteDAO extends BaseDAO
                     // ':unidade'=>$atendente,
                     ':cpf'=>$cpf,
                     ':matricula'=>$matricula,
+                    ':unidade'=>$unidade,
                     ':logradouro'=>$logradouro,
                     ':bairro'=>$bairro,
                     ':cep'=>$cep,

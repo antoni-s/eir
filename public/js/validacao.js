@@ -16,6 +16,11 @@ $(document).ready(function() {
 
     }, "Horário de Fechamento menor que o Horário de Abertura");
 
+    jQuery.validator.addMethod("verificaUnidade", function(value, element) {
+      var unidade = value;
+      return unidade != -1;
+    }, "Selecione uma unidade");
+
     $('#form_cadastro_unidade').validate({
         rules: {
             nome: {
@@ -77,6 +82,99 @@ $(document).ready(function() {
                 required: "Este campo não pode ser vazio"
             },
             horaFechamento: {
+                required: "Este campo não pode ser vazio"
+            },
+            logradouro: {
+                required: "Este campo não pode ser vazio"
+            },
+            bairro: {
+                required: "Este campo não pode ser vazio"
+            },
+            complemento: {
+                required: "Este campo não pode ser vazio"
+            },
+            cidade: {
+                required: "Este campo não pode ser vazio"
+            },
+            uf: {
+                required: "Este campo não pode ser vazio"
+            },
+            cep: {
+                required: "Este campo não pode ser vazio"
+            }
+        }
+    });
+
+    $('#form_cadastro_atendente').validate({
+        rules: {
+            nome: {
+                required: true
+            },
+            cpf: {
+                required: true
+            },
+            matricula: {
+                required: true
+            },
+            unidade: {
+                verificaUnidade: true,
+                required: true
+            },
+            telefone: {
+                required: true
+            },
+            email: {
+                required: true
+            },
+            logradouro: {
+                required: true
+            },
+            bairro: {
+                required: true
+            },
+            complemento: {
+                required: true
+            },
+            cep: {
+                required: true,
+                maxlength: false
+            },
+            cidade: {
+                required: true
+            },
+            uf: {
+                required: true
+            }
+        },
+        highlight: function(element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if (element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        messages: {
+            nome: {
+                required: "Este campo não pode ser vazio"
+            },
+            cpf: {
+                required: "Este campo não pode ser vazio"
+            },
+            matricula: {
+                required: "Este campo não pode ser vazio"
+            },
+            telefone: {
+                required: "Este campo não pode ser vazio"
+            },
+            email: {
                 required: "Este campo não pode ser vazio"
             },
             logradouro: {

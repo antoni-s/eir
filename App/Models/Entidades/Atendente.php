@@ -10,6 +10,7 @@ class Atendente
     private $nome;
     private $cpf;
     private $matricula;
+    private $unidade;
     private $logradouro;
     private $bairro;
     private $cep;
@@ -58,6 +59,16 @@ class Atendente
     public function setMatricula($matricula)
     {
         $this->matricula = $matricula;
+    }
+
+    public function getUnidade()
+    {
+        return $this->unidade;
+    }
+
+    public function setUnidade($unidade)
+    {
+        $this->unidade = $unidade;
     }
 
     public function getLogradouro()

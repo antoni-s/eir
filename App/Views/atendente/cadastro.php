@@ -30,6 +30,20 @@
 
                 </div>
                 <div class="form-group">
+                    <label for="unidade">Unidade</label>
+                    <select name="unidade" class="form-control">
+                      <option value="-1" class="selected">Selecione uma unidade</option>
+
+                      <?php
+                          foreach($viewVar['unidades'] as $unidade) {
+                      ?>
+                        <option value="<?php echo $unidade->getId(); ?>"  <?php echo ($Sessao::retornaValorFormulario('unidade') == $unidade->getId()) ? "selected" : "" ?>><?php echo $unidade->getNome().' - '.$unidade->getIdu(); ?></option>
+                      <?php
+                          }
+                      ?>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="telefone">Telefone</label>
                     <input type="tel" class="form-control" name="telefone" placeholder="Telefone do Atendente" value="<?php echo $Sessao::retornaValorFormulario('telefone'); ?>" required>
 
@@ -63,18 +77,6 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" class="form-control" name="cidade" placeholder="Cidade do Atendente" value="<?php echo $Sessao::retornaValorFormulario('cidade'); ?>" required>
 
-                </div>
-                <div class="form-group">
-                    <label for="unidade">Unidade</label>
-                    <select name="unidade" class="form-control">
-                      <?php
-                          foreach($viewVar['unidades'] as $unidade) {
-                      ?>
-                        <option value="<?php echo $unidade->getId(); ?>"  <?php echo ($Sessao::retornaValorFormulario('unidade') == $unidade->getNome()) ? "select" : "" ?>><?php echo $unidade->getNome().' - '.$unidade->getIdu(); ?></option>
-                      <?php
-                          }
-                      ?>
-                    </select>
                 </div>
                 <div class="form-group">
                     <label for="uf">UF</label>

@@ -119,7 +119,11 @@ class AtendenteController extends Controller
             $this->redirect('/atendente');
         }
 
+        $unidadeDAO = new UnidadeDAO();
+        $unidade = $unidadeDAO->listar();
+
         self::setViewParam('atendente',$atendente);
+        self::setViewParam('unidades',$unidade);
         self::setViewParam('queryString', Paginacao::criandoQuerystring($_GET['paginaSelecionada'], $_GET['buscaAtendente']));
 
         $this->render('/atendente/editar');

@@ -36,6 +36,16 @@ class AtendenteValidador{
             $resultadoValidacao->addErro('matricula',"Matricula: Este campo não pode ser vazio");
         }
 
+        if(empty($atendente->getUnidade()))
+        {
+            $resultadoValidacao->addErro('unidade',"Unidade: Este campo não pode ser vazio");
+        }
+
+        if($atendente->getUnidade() == -1)
+        {
+            $resultadoValidacao->addErro('unidade',"Unidade: Selecione uma unidade");
+        }
+
         if(empty($atendente->getLogradouro()))
         {
             $resultadoValidacao->addErro('logradouro',"Logradouro: Este campo não pode ser vazio");

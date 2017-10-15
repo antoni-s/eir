@@ -33,6 +33,19 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="unidade">Unidade</label>
+                    <select name="unidade" class="form-control">
+                        <?php
+                          foreach($viewVar['unidades'] as $unidade) {
+                        ?>
+                          <option value="<?php echo $unidade->getId(); ?>"  <?php echo ($viewVar['atendente']->getUnidade() == $unidade->getId()) ? "select" : "" ?>><?php echo $unidade->getNome().' - '.$unidade->getIdu(); ?></option>
+                        <?php
+                          }
+                        ?>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="telefone">Telefone</label>
                     <input type="tel"  class="form-control"  name="telefone" id="teleofne" placeholder="" value="<?php echo $viewVar['atendente']->getTelefone(); ?>" required>
                 </div>
