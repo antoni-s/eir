@@ -53,15 +53,16 @@ class AtendenteController extends Controller
         // $Atendente->setStatus($_POST['status']);
         // $Atendente->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Atendente->setAtendente($_POST['atendente']);
-        $Atendente->setIdu($_POST['idu']);
+        $Atendente->setCpf($_POST['cpf']);
+        $Atendente->setMatricula($_POST['matricula']);
         $Atendente->setLogradouro($_POST['logradouro']);
         $Atendente->setBairro($_POST['bairro']);
         $Atendente->setCep($_POST['cep']);
         $Atendente->setCidade($_POST['cidade']);
         $Atendente->setUf($_POST['uf']);
         $Atendente->setComplemento($_POST['complemento']);
-        $Atendente->setHoraAbertura($_POST['horaAbertura']);
-        $Atendente->setHoraFechamento($_POST['horaFechamento']);
+        $Atendente->setTelefone($_POST['telefone']);
+        $Atendente->setEmail($_POST['email']);
         // $Atendente->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);
@@ -76,9 +77,9 @@ class AtendenteController extends Controller
 
         $atendenteDAO = new AtendenteDAO();
 
-        if($atendenteDAO->validaIdu($Atendente->getIdu()))
+        if($atendenteDAO->validaCpf($Atendente->getCpf()))
         {
-            Sessao::gravaErro(['Código IDU já existe.']);
+            Sessao::gravaErro(['CPF já existe.']);
             $this->redirect('/atendente/cadastro');
         }
 
@@ -124,15 +125,16 @@ class AtendenteController extends Controller
         // $Atendente->setStatus($_POST['status']);
         // $Atendente->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Atendente->setAtendente($_POST['atendente']);
-        $Atendente->setIdu($_POST['idu']);
+        $Atendente->setCpf($_POST['cpf']);
+        $Atendente->setMatricula($_POST['matricula']);
         $Atendente->setLogradouro($_POST['logradouro']);
         $Atendente->setBairro($_POST['bairro']);
         $Atendente->setCep($_POST['cep']);
         $Atendente->setCidade($_POST['cidade']);
         $Atendente->setUf($_POST['uf']);
         $Atendente->setComplemento($_POST['complemento']);
-        $Atendente->setHoraAbertura($_POST['horaAbertura']);
-        $Atendente->setHoraFechamento($_POST['horaFechamento']);
+        $Atendente->setTelefone($_POST['telefone']);
+        $Atendente->setEmail($_POST['email']);
         // $Atendente->setDescricao($_POST['descricao']);
 
         Sessao::gravaFormulario($_POST);
@@ -149,10 +151,10 @@ class AtendenteController extends Controller
 
         $AtendenteSelecionado = $atendenteDAO->listar($Atendente->getId());
 
-        if($atendenteDAO->validaIdu($Atendente->getIdu()) &&
-            ($AtendenteSelecionado->getIdu() != $Atendente->getIdu()))
+        if($atendenteDAO->validaCpf($Atendente->getCpf()) &&
+            ($AtendenteSelecionado->getCpf() != $Atendente->getCpf()))
         {
-            Sessao::gravaErro(['Código IDU já existe.']);
+            Sessao::gravaErro(['CPF já existe.']);
             $this->redirect('/atendente/edicao/'.$_POST['id'].'?buscaAtendente='.$_GET['buscaAtendente'].'&paginaSelecionada='.$_GET['paginaSelecionada']);
         }
 
