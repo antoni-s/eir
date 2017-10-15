@@ -2,6 +2,7 @@ $(document).ready(function() {
     $("input[name='cep']").mask("99999-999");
 
     $.validator.addMethod('verificaHorario', function(value, element) {
+      alert(value);
       return parseInt(value) % 5 == 0;
       // var horaAbertura = $("input[name='horaAbertura']").val();
       // var horaFechamento = value;
