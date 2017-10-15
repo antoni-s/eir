@@ -28,7 +28,7 @@ $(document).ready(function() {
                 required: true
             },
             horaFechamento: {
-                verificaHorario: true,
+                // verificaHorario: true,
                 required: true
             },
             logradouro: {
