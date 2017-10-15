@@ -55,7 +55,7 @@
                                 <td><?php echo $atendente->getNome(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getCpf(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getMatricula(); ?></td>
-                                <td class=" hidden-sm hidden-xs"><?php echo $atendente->getUnidade(); ?></td>
+                                <td class=" hidden-sm hidden-xs"><?php echo $atendente['unidade_nome'] ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getLogradouro().', '.$atendente->getBairro().', '.$atendente->getComplemento().', '.$atendente->getCep().', '.$atendente->getCidade().', '.$atendente->getUf(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getDataCadastro()->format('d/m/Y'); ?></td>
                                 <td>
