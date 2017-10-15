@@ -24,7 +24,7 @@
                     <input type="text" class="form-control" name="idu" placeholder="Código único da Unidade" value="<?php echo $Sessao::retornaValorFormulario('idu'); ?>" maxlength="13" required>
 
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="horaAbertura">Hoário de Abertura</label>
                     <input type="time" class="form-control"  name="horaAbertura" placeholder="08:00" value="<?php echo $Sessao::retornaValorFormulario('horaAbertura'); ?>" required>
 
@@ -33,7 +33,7 @@
                     <label for="horaFechamento">Hoário de Fechamento</label>
                     <input type="time" class="form-control"  name="horaFechamento" placeholder="18:00" value="<?php echo $Sessao::retornaValorFormulario('horaFechamento'); ?>" required>
 
-                </div> -->
+                </div>
                 <div class="form-group">
                     <label for="logradouro">Logradouro</label>
                     <input type="text" class="form-control" name="logradouro" placeholder="Rua/Avenida da Unidade" value="<?php echo $Sessao::retornaValorFormulario('logradouro'); ?>" required>
