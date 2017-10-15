@@ -15,8 +15,8 @@ class AtendenteDAO extends BaseDAO
         $inicio = (($paginaSelecionada - 1) * $totalPorPagina);
 
         // LIKE '%$buscaAtendente%' OR descricao
-        $whereBusca = " WHERE nome
-                                LIKE '%$buscaAtendente%' OR cpf = '$buscaAtendente'
+        $whereBusca = " WHERE atendente.nome
+                                LIKE '%$buscaAtendente%' OR atendente.cpf = '$buscaAtendente'
                          ";
 
         $resultadoTotal = $this->select(
