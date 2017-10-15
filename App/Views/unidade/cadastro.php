@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <label for="idu">IDU</label>
-                    <input type="text" class="form-control" name="idu" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('idu'); ?>" maxlength="13" required>
+                    <input type="text" class="form-control" name="idu" placeholder="Código único da Unidade" value="<?php echo $Sessao::retornaValorFormulario('idu'); ?>" maxlength="13" required>
 
                 </div>
                 <div class="form-group">
@@ -36,27 +36,27 @@
                 </div>
                 <div class="form-group">
                     <label for="logradouro">Logradouro</label>
-                    <input type="text" class="form-control" name="logradouro" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('logradouro'); ?>" required>
+                    <input type="text" class="form-control" name="logradouro" placeholder="Rua/Avenida da Unidade" value="<?php echo $Sessao::retornaValorFormulario('logradouro'); ?>" required>
 
                 </div>
                 <div class="form-group">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" name="bairro" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('bairro'); ?>" required>
+                    <input type="text" class="form-control" name="bairro" placeholder="Bairro/Setor da Unidade" value="<?php echo $Sessao::retornaValorFormulario('bairro'); ?>" required>
 
                 </div>
                 <div class="form-group">
                     <label for="complemento">Complemento</label>
-                    <input type="text" class="form-control" name="complemento" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('complemento'); ?>" required>
+                    <input type="text" class="form-control" name="complemento" placeholder="Quadra/Lote/Número da Unidade" value="<?php echo $Sessao::retornaValorFormulario('complemento'); ?>" required>
 
                 </div>
                 <div class="form-group">
                     <label for="cep">CEP</label>
-                    <input type="text" class="form-control" name="cep" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('cep'); ?>" maxlength="8" required>
+                    <input type="text" class="form-control" name="cep" placeholder="CEP da Unidade" value="<?php echo $Sessao::retornaValorFormulario('cep'); ?>" maxlength="8" required>
 
                 </div>
                 <div class="form-group">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" name="cidade" placeholder="0" value="<?php echo $Sessao::retornaValorFormulario('cidade'); ?>" required>
+                    <input type="text" class="form-control" name="cidade" placeholder="Cidade da Unidade" value="<?php echo $Sessao::retornaValorFormulario('cidade'); ?>" required>
 
                 </div>
                 <div class="form-group">
