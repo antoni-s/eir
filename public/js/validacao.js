@@ -1,20 +1,20 @@
 $(document).ready(function() {
     $("input[name='cep']").mask("99999-999");
 
-    // JQuery.validator.addMethod("verificaHorario", function(value, element) {
-    //   var horaAbertura = $("input[name='horaAbertura']").val();
-    //   var horaFechamento = value;
-    //   horaAbertura = horaAbertura.split(":");
-    //   horaAbertura = horaAbertura[0] + horaAbertura[1];
-    //   horaFechamento = horaFechamento.split(":");
-    //   horaFechamento = horaFechamento[0] + horaFechamento[1];
-    //
-    //   horaAbertura = parseInt(horaAbertura);
-    //   horaFechamento = parseInt(horaFechamento);
-    //
-    //   return horaFechamento > horaAbertura;
-    //
-    // }, "Horário de Fechamento menor que o Horário de Abertura");
+    jQuery.validator.addMethod("verificaHorario", function(value, element) {
+      var horaAbertura = $("input[name='horaAbertura']").val();
+      var horaFechamento = value;
+      horaAbertura = horaAbertura.split(":");
+      horaAbertura = horaAbertura[0] + horaAbertura[1];
+      horaFechamento = horaFechamento.split(":");
+      horaFechamento = horaFechamento[0] + horaFechamento[1];
+
+      horaAbertura = parseInt(horaAbertura);
+      horaFechamento = parseInt(horaFechamento);
+
+      return horaFechamento > horaAbertura;
+
+    }, "Horário de Fechamento menor que o Horário de Abertura");
 
     $('#form_cadastro').validate({
         rules: {
@@ -28,6 +28,7 @@ $(document).ready(function() {
                 required: true
             },
             horaFechamento: {
+                verificaHorario: true,
                 required: true
             },
             logradouro: {
