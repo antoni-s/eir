@@ -19,8 +19,8 @@ class Unidade
     private $cidade;
     private $uf;
     private $complemento;
-    private $horaAbertura
-    private $horaFechamento
+    private $horaAbertura;
+    private $horaFechamento;
     private $dataCadastro;
 
     public function getId()
