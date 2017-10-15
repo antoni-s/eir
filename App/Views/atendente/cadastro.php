@@ -65,6 +65,18 @@
 
                 </div>
                 <div class="form-group">
+                    <label for="unidade">Unidade</label>
+                    <select name="unidade" class="form-control">
+                      <?php
+                          foreach($viewVar['unidades'] as $unidade) {
+                      ?>
+                        <option value="<?php echo $unidade->getNome(); ?>"  <?php echo ($Sessao::retornaValorFormulario('unidade') == $unidade->getNome()) ? "select" : "" ?>><?php echo $unidade->getNome(); ?></option>
+                      <?php
+                          }
+                      ?>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="uf">UF</label>
                     <select name="uf" class="form-control">
                         <option value="AC"  <?php echo ($Sessao::retornaValorFormulario('AC') == "AC") ? "select" : "" ?>>AC</option>

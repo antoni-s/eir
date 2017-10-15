@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Lib\ConversorMonetario;
 use App\Lib\Sessao;
 use App\Lib\Paginacao;
+use App\Lib\Utilidade;
 use App\Models\DAO\AtendenteDAO;
 use App\Models\Entidades\Atendente;
 use App\Models\Validacao\AtendenteValidador;
@@ -39,6 +40,15 @@ class AtendenteController extends Controller
 
     public function cadastro()
     {
+        $unidades = new Utilidade();
+
+        if(!$unidades){
+            Sessao::gravaMensagem("Nenhuma Unidade Cadastrada");
+            $this->redirect('/atendente');
+        }
+
+        self::setViewParam('unidades', $unidades);
+
         $this->render('/atendente/cadastro');
 
         Sessao::limpaFormulario();
