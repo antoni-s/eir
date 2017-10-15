@@ -8,6 +8,8 @@ use App\Models\Entidades\Unidade;
 
 class Utilidade
 {
+    private $resultado;
+
     public function listarUnidades()
     {
       $unidadeDAO = new UnidadeDAO();

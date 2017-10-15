@@ -70,7 +70,7 @@
                       <?php
                           foreach($viewVar['unidades'] as $unidade) {
                       ?>
-                        <option value="<?php echo $unidade->getNome(); ?>"  <?php echo ($Sessao::retornaValorFormulario('unidade') == $unidade->getNome()) ? "select" : "" ?>><?php echo $unidade->getNome(); ?></option>
+                        <option value="<?php echo $unidade->getId(); ?>"  <?php echo ($Sessao::retornaValorFormulario('unidade') == $unidade->getNome()) ? "select" : "" ?>><?php echo $unidade->getNome().' - '.$unidade->getIdu(); ?></option>
                       <?php
                           }
                       ?>
