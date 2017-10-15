@@ -39,7 +39,7 @@
                         <?php
                           foreach($viewVar['unidades'] as $unidade) {
                         ?>
-                          <option value="<?php echo $unidade->getId(); ?>"  <?php echo ($viewVar['atendente']->getUnidade() == $unidade->getId()) ? "select" : "" ?>><?php echo $unidade->getNome().' - '.$unidade->getIdu(); ?></option>
+                          <option value="<?php echo $unidade->getId(); ?>"  <?php echo ($viewVar['atendente']->getUnidade() == $unidade->getId()) ? "selected" : "" ?>><?php echo $unidade->getNome().' - '.$unidade->getIdu(); ?></option>
                         <?php
                           }
                         ?>
