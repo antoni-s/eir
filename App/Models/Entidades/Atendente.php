@@ -20,6 +20,7 @@ class Atendente
     private $telefone;
     private $email;
     private $dataCadastro;
+    private $unidadeNome;
 
     public function getId()
     {
@@ -69,6 +70,16 @@ class Atendente
     public function setUnidade($unidade)
     {
         $this->unidade = $unidade;
+    }
+
+    public function getUnidadeNome()
+    {
+        return $this->unidadeNome;
+    }
+
+    public function setUnidadeNome($unidadeNome)
+    {
+        $this->unidadeNome = $unidadeNome;
     }
 
     public function getLogradouro()

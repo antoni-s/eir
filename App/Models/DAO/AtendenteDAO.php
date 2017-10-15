@@ -25,7 +25,7 @@ class AtendenteDAO extends BaseDAO
 
         $resultado = $this->select(
             // "SELECT * FROM atendente as atendente $whereBusca LIMIT $inicio,$totalPorPagina"
-            "SELECT atendente.*, unidade.nome AS unidade_nome
+            "SELECT atendente.*, unidade.nome AS unidadeNome
               FROM atendente atendente
               INNER JOIN unidade unidade ON atendente.unidade = unidade.id
               $whereBusca LIMIT $inicio,$totalPorPagina"
