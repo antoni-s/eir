@@ -8,6 +8,8 @@ use App\Lib\Paginacao;
 use App\Lib\Utilidade;
 use App\Models\DAO\AtendenteDAO;
 use App\Models\Entidades\Atendente;
+use App\Models\DAO\UnidadeDAO;
+use App\Models\Entidades\Unidade;
 use App\Models\Validacao\AtendenteValidador;
 
 class AtendenteController extends Controller
@@ -40,14 +42,16 @@ class AtendenteController extends Controller
 
     public function cadastro()
     {
-        $unidades = new Utilidade();
+      $unidadeDAO = new UnidadeDAO();
 
-        if(!$unidades){
+      $unidade = $unidadeDAO->listar();
+
+        if(!$unidade){
             Sessao::gravaMensagem("Nenhuma Unidade Cadastrada");
             $this->redirect('/atendente');
         }
 
-        self::setViewParam('unidades', $unidades);
+        self::setViewParam('unidades', $unidade);
 
         $this->render('/atendente/cadastro');
 
