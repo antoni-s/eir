@@ -1,12 +1,12 @@
 $(document).ready(function() {
     $("input[name='cep']").mask("99999-999");
 
-    $.validator.addMethod('verificaHorario', function(value, element) {
-      if(parseInt(value) == 5) {
+    JQuery.validator.addMethod("verificaHorario", function(value, element) {
+      if(value == 5 || value == '5') {
         return true;
       } else {
         return false;
-      }
+      };
       // var horaAbertura = $("input[name='horaAbertura']").val();
       // var horaFechamento = value;
       // horaAbertura = horaAbertura.split(":");
@@ -19,7 +19,7 @@ $(document).ready(function() {
       //
       // return horaFechamento > horaAbertura;
 
-    }, 'Horário de Fechamento menor que o Horário de Abertura');
+    }, "Horário de Fechamento menor que o Horário de Abertura");
 
     $('#form_cadastro').validate({
         rules: {
