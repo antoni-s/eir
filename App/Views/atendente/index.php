@@ -42,6 +42,7 @@
                             <!-- <td class="info hidden-sm hidden-xs">Preço</td> -->
                             <td class="info hidden-sm hidden-xs">CPF</td>
                             <td class="info hidden-sm hidden-xs">Matricula</td>
+                            <td class="info hidden-sm hidden-xs">Unidade</td>
                             <td class="info hidden-sm hidden-xs">Endereço</td>
                             <!-- <td class="info hidden-sm hidden-xs">Status</td> -->
                             <td class="info hidden-sm hidden-xs">Data Cadastro</td>
@@ -54,6 +55,7 @@
                                 <td><?php echo $atendente->getNome(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getCpf(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getMatricula(); ?></td>
+                                <td class=" hidden-sm hidden-xs"><?php echo $atendente->getUnidade(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getLogradouro().', '.$atendente->getBairro().', '.$atendente->getComplemento().', '.$atendente->getCep().', '.$atendente->getCidade().', '.$atendente->getUf(); ?></td>
                                 <td class=" hidden-sm hidden-xs"><?php echo $atendente->getDataCadastro()->format('d/m/Y'); ?></td>
                                 <td>
