@@ -35,6 +35,7 @@
                 <div class="form-group">
                     <label for="unidade">Unidade</label>
                     <select name="unidade" class="form-control">
+                          <option value="-1" selected>Selecione uma unidade</option>
                         <?php
                           foreach($viewVar['unidades'] as $unidade) {
                         ?>
