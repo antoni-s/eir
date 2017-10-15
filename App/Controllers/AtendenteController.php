@@ -46,7 +46,8 @@ class AtendenteController extends Controller
       //
       // $unidade = $unidadeDAO->listar();
 
-      $unidade = new Utilidade();
+      $utiliadade = new Utilidade();
+      $unidade = $utilidade->listarUnidades();
 
         if(!$unidade){
             Sessao::gravaMensagem("Nenhuma Unidade Cadastrada");

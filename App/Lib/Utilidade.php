@@ -8,10 +8,11 @@ use App\Models\Entidades\Unidade;
 
 class Utilidade
 {
-    public function __construct()
+    public function listarUnidades()
     {
       $unidadeDAO = new UnidadeDAO();
-      return $unidadeDAO->listar();
+      $unidade = $unidadeDAO->listar();
+      return $unidade;
     }
 }
 ?>
