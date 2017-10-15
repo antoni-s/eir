@@ -16,7 +16,7 @@ class AtendenteDAO extends BaseDAO
 
         // LIKE '%$buscaAtendente%' OR descricao
         $whereBusca = " WHERE nome
-                                LIKE '%$buscaAtendente%' OR idu = '$buscaAtendente'
+                                LIKE '%$buscaAtendente%' OR cpf = '$buscaAtendente'
                          ";
 
         $resultadoTotal = $this->select(
