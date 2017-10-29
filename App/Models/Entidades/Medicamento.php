@@ -8,10 +8,10 @@ class Medicameto
 {
     private $id;
     private $nome;
+    private $codigoBarras;
     private $composicao;
     private $tipo;
     private $dose;
-    private $quantidade;
     private $informacoes;
     private $dataAtualizacao;
 
@@ -33,6 +33,16 @@ class Medicameto
     public function setNome($nome)
     {
         $this->nome = $nome;
+    }
+
+    public function getCodigoBarras()
+    {
+        return $this->codigoBarras;
+    }
+
+    public function setCodigoBarras($codigoBarras)
+    {
+        $this->codigoBarras = $codigoBarras;
     }
 
     public function getComposicao()
@@ -63,96 +73,6 @@ class Medicameto
     public function setDose($dose)
     {
         $this->dose = $dose;
-    }
-
-    public function getQuantidade()
-    {
-        return $this->quantidade;
-    }
-
-    public function setQuantidade($quantidade)
-    {
-        $this->quantidade = $quantidade;
-    }
-
-    public function getLogradouro()
-    {
-        return $this->logradouro;
-    }
-
-    public function setLogradouro($logradouro)
-    {
-        $this->logradouro = $logradouro;
-    }
-
-    public function getBairro()
-    {
-        return $this->bairro;
-    }
-
-    public function setBairro($bairro)
-    {
-        $this->bairro = $bairro;
-    }
-
-    public function getCep()
-    {
-        return $this->cep;
-    }
-
-    public function setCep($cep)
-    {
-        $this->cep = $cep;
-    }
-
-    public function getCidade()
-    {
-        return $this->cidade;
-    }
-
-    public function setCidade($cidade)
-    {
-        $this->cidade = $cidade;
-    }
-
-    public function getUf()
-    {
-        return $this->uf;
-    }
-
-    public function setUf($uf)
-    {
-        $this->uf = $uf;
-    }
-
-    public function getComplemento()
-    {
-        return $this->complemento;
-    }
-
-    public function setComplemento($complemento)
-    {
-        $this->complemento = $complemento;
-    }
-
-    public function getTelefone()
-    {
-        return $this->telefone;
-    }
-
-    public function setTelefone($telefone)
-    {
-        $this->telefone = $telefone;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function setEmail($email)
-    {
-        $this->email = $email;
     }
 
     public function getDataAtualizacao()
