@@ -26,6 +26,12 @@
                 <li <?php if($viewVar['nameController'] == "AtendenteController" && $viewVar['nameAction'] == "cadastro") { ?> class="active" <?php } ?>>
                     <a href="http://<?php echo APP_HOST; ?>/atendente/cadastro" >Cadastro de Atendente</a>
                 </li>
+                <li <?php if($viewVar['nameController'] == "UsuarioController" && ($viewVar['nameAction'] == "" || $viewVar['nameAction'] == "index")) { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/usuario" >Lista de Usuários</a>
+                </li>
+                <li <?php if($viewVar['nameController'] == "UsuarioController" && $viewVar['nameAction'] == "cadastro") { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/usuario/cadastro" >Cadastro de Usuário</a>
+                </li>
             </ul>
         </div>
     </div>
