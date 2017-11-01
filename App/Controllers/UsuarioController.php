@@ -21,7 +21,7 @@ class UsuarioController extends Controller
         $paginaSelecionada  = isset($_GET['paginaSelecionada']) ? $_GET['paginaSelecionada'] : 1;
         $totalPorPagina     = 6;
 
-        // if(isset($_GET['buscaUsuario'])){
+        if(isset($_GET['buscaUsuario'])){
 
             $listaUsuarios      = $usuarioDAO->buscaComPaginacao($_GET['buscaUsuario'], $totalPorPagina, $paginaSelecionada);
 
@@ -33,7 +33,7 @@ class UsuarioController extends Controller
 
             self::setViewParam('listaUsuarios'  , $listaUsuarios['resultado']);
 
-        // }
+        }
 
         $this->render('/usuario/index');
 
