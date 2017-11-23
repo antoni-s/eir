@@ -15,20 +15,13 @@ class UnidadeTest extends TestCase
   public function testUnidadeId( )
   {
     $u = $this->getMockBuilder(Unidade::class)
-         ->setId('123')
-         ->getMock();
-    //$u->setId("123");
-    //$this->assertEquals('123', $u->getId());
+                         ->setMethods(['setId'])
+                         ->getMock();
 
-  }
+    $u->expects($this->once())
+                 ->method('setId')
+                 ->with($this->equalTo('123'));
 
-  public function testUnidadeName()
-  {
-    $u = $this->getMockBuilder(Unidade::class)
-         ->setNome('dsadsadsa')
-         ->getMock();
-    //$u->setUnidade("aaa");
-    //$this->assertEquals("aaa", $u->getNome());
   }
 
 }
