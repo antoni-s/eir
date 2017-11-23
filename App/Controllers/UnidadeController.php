@@ -49,7 +49,7 @@ class UnidadeController extends Controller
     public function salvar()
     {
         $Unidade = new Unidade();
-        $Unidade->setNome($_POST['nome']);
+        $Unidade->setNome("$_POST['nome']");
         // $Unidade->setStatus($_POST['status']);
         // $Unidade->setPreco(ConversorMonetario::realParaDolar($_POST['preco']));
         // $Unidade->setUnidade($_POST['unidade']);
