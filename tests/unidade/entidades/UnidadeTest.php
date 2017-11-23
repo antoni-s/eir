@@ -1,8 +1,9 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use App\Models\Entidades\Unidade;
 
-include_once __DIR__.'/../../../App/Models/Entidades/Unidade.php';
+//include_once __DIR__.'/../../../App/Models/Entidades/Unidade.php';
 
 /**
  * Testes para a classe Unidades / Entidades.
@@ -14,13 +15,11 @@ class UnidadeTest extends TestCase
 
   public function testUnidadeId( )
   {
-    $u = $this->getMockBuilder(Unidade::class)
-                         ->setMethods(['setId'])
-                         ->getMock();
+    $u = $this->createMock(Unidade::class);
 
-    $u->expects($this->once())
-                 ->method('setId')
-                 ->with($this->equalTo('123'));
+    $u->method('getId')->willReturn(NULL);
+
+    $this->assertEquals(NULL, $u->getId());
 
   }
 
