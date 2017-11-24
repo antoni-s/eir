@@ -4,7 +4,7 @@ namespace App\Models\Entidades;
 
 use DateTime;
 
-class Medicameto
+class Medicamento
 {
     private $id;
     private $nome;

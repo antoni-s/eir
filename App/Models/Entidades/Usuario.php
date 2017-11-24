@@ -1,4 +1,4 @@
-Usuario<?php
+<?php
 
 namespace App\Models\Entidades;
 
@@ -68,7 +68,7 @@ class Usuario
         return new DateTime($this->dataNascimento);
     }
 
-    public function setDataCadastro($dataNascimento)
+    public function setDataNascimento($dataNascimento)
     {
         $this->dataNascimento = $dataNascimento;
     }
