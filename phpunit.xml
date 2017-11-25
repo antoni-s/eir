@@ -32,6 +32,11 @@
             <file>./tests/unidade/entidades/UsuarioTest.php</file>
             <file>./App/Models/Entidades/Medicamento.php</file>
             <file>./tests/unidade/entidades/MedicamentoTest.php</file>
+            <file>./App/Models/Entidades/Atendente.php</file>
+            <file>./tests/unidade/entidades/AtendenteTest.php</file>
+            <directory>./tests/unidade/validacao</directory>
+            <file>./App/Models/Validacao/ResultadoValidacao.php</file>
+            <file>./tests/unidade/validacao/ResultadoValidacaoTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
