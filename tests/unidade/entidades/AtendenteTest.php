@@ -1,7 +1,7 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use App\Models\Entidades\Atendente;
+use PHPUnit\Framework\TestCase;
 
 /**
  *
@@ -9,7 +9,8 @@ use App\Models\Entidades\Atendente;
 class AtendenteTest extends TestCase
 {
 
-  public function testAtendenteId( )
+
+  public function testAtendenteId()
   {
     $u = $this->createMock(Atendente::class);
     $u->method('getId')->willReturn(NULL);
@@ -176,6 +177,5 @@ class AtendenteTest extends TestCase
   }
 
 }
-
 
  ?>
