@@ -27,7 +27,7 @@ class AtendenteTest extends TestCase
   {
 		fwrite(STDOUT, __METHOD__ . "\n");
 		$id = $this->atendente->getId();
-		$this.assertEquals($id, NULL);
+		$this->assertEquals($id, NULL);
   }
 
   public function testAtendenteNome()

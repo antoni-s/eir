@@ -46,9 +46,11 @@
 		</filter>
 
     <testsuites>
-        <testsuite name="Testes">
-						<directory suffix=".php">./tests</directory>
+        <testsuite name="Testes das entiades">
+						<directory suffix=".php">./tests/unidade/entidades</directory>
         </testsuite>
-
+				<testsuite name="Testes das validações">
+						<directory suffix=".php">./tests/unidade/validacao</directory>
+				</testsuite>
     </testsuites>
 </phpunit>
