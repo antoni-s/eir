@@ -2,7 +2,7 @@
 
 namespace App\Models\Entidades;
 
-//use DateTime;
+use DateTime;
 
 class Unidade
 {
