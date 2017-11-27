@@ -38,6 +38,7 @@
 								<directory>./App/Views</directory>
 								<directory>./App/Controllers</directory>
 								<directory>./App/DAO</directory>
+								<directory>./App/Lib</directory>
 								<directory>./mysql</directory>
 								<file>./App/App.php</file>
 						</exclude>
@@ -45,19 +46,12 @@
 		</filter>
 
     <testsuites>
-        <testsuite name="Tests">
-            <directory>./tests/unidade/entidades</directory>
-            <file>./App/Models/Entidades/Unidade.php</file>
-            <file>./tests/unidade/entidades/UnidadeTest.php</file>
-            <file>./App/Models/Entidades/Usuario.php</file>
-            <file>./tests/unidade/entidades/UsuarioTest.php</file>
-            <file>./App/Models/Entidades/Medicamento.php</file>
-            <file>./tests/unidade/entidades/MedicamentoTest.php</file>
-            <file>./App/Models/Entidades/Atendente.php</file>
-            <file>./tests/unidade/entidades/AtendenteTest.php</file>
-            <directory>./tests/unidade/validacao</directory>
-            <file>./App/Models/Validacao/ResultadoValidacao.php</file>
-            <file>./tests/unidade/validacao/ResultadoValidacaoTest.php</file>
+        <testsuite name="Teste das entidades">
+						<directory suffix=".php">./tests/unidade/entidades</directory>
         </testsuite>
+
+				<testsuite name="Teste da validacao">
+						<directory suffix=".php">./tests/unidade/validacao</directory>
+				</testsuite>
     </testsuites>
 </phpunit>
