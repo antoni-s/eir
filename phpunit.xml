@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit>
+<phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
     backupStaticAttributes="false"
@@ -23,8 +23,29 @@
     bootstrap="./vendor/autoload.php"
     strict="true"
     verbose="true">
+
+		<filter>
+				<whitelist>
+						<directory>./App</directory>
+						<exclude>
+								<directory>./public</directory>
+								<directory>./vendor</directory>
+								<directory>./tests</directory>
+								<directory>./App/Views</directory>
+								<directory>./docs</directory>
+								<directory>./mysql</directory>
+								<directory>./Test</directory>
+								<directory>./App/Views</directory>
+								<directory>./App/Controllers</directory>
+								<directory>./App/DAO</directory>
+								<directory>./mysql</directory>
+								<file>./App/App.php</file>
+						</exclude>
+				</whitelist>
+		</filter>
+
     <testsuites>
-        <testsuite name="teste">
+        <testsuite name="Tests">
             <directory>./tests/unidade/entidades</directory>
             <file>./App/Models/Entidades/Unidade.php</file>
             <file>./tests/unidade/entidades/UnidadeTest.php</file>
