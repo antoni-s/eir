@@ -9,17 +9,25 @@ use PHPUnit\Framework\TestCase;
 class AtendenteTest extends TestCase
 {
 
+	private $atendente;
 
-  public function testAtendenteId()
+	public function __construct()
+	{
+			$this->atendente = new Atendente();
+			parent::__construct();
+	}
+
+	public function testInstanceAtendente()
+	{
+			$this->atendente = new Atendente();
+			$this->assertInstanceOf(Atendente::class, $this->atendente);
+	}
+
+  public function testGetEmptyId()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getId')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getId());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setId')->willReturn('');
-    $this->assertEquals('',$u->setId(123));
-
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$id = $this->atendente->getId();
+		$this.assertEquals($id, NULL);
   }
 
   public function testAtendenteNome()
