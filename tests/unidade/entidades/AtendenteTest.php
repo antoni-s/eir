@@ -30,6 +30,14 @@ class AtendenteTest extends TestCase
 		$this->assertEquals($id, NULL);
   }
 
+	public function testGetId()
+	{
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setId(1);
+		$id = $this->atendente->getId();
+		$this->assertEquals($id, 1);
+	}
+
   public function testAtendenteNome()
   {
     $u = $this->createMock(Atendente::class);
