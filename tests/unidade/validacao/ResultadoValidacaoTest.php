@@ -23,7 +23,7 @@ class ResultadoValidacaoTest extends TestCase
 	}
 
 
-
+/*
   public function testResultadoValidacaoGet()
   {
     fwrite(STDOUT, __METHOD__ . "\n");
@@ -31,7 +31,7 @@ class ResultadoValidacaoTest extends TestCase
 		$this->assertEquals($resul, NULL);
   }
 
-/*
+
   public function testResultadoValidacaoAddErro()
   {
     fwrite(STDOUT, __METHOD__ . "\n");
