@@ -48,145 +48,106 @@ class AtendenteTest extends TestCase
 
   public function testAtendenteCpf()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getCpf')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCpf());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setCpf')->willReturn('');
-    $this->assertEquals('',$u->setCpf('123.123.123-12'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setCpf('123.123.123-12');
+		$id = $this->atendente->getCpf();
+		$this->assertEquals($id, '123.123.123-12');
   }
 
   public function testAtendenteMatricula()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getMatricula')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getMatricula());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setMatricula')->willReturn('');
-    $this->assertEquals('',$u->setMatricula(123456));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setMatricula('123456');
+		$id = $this->atendente->getMatricula();
+		$this->assertEquals($id, '123456');
   }
 
   public function testAtendenteUnidade()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getUnidade')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getUnidade());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setUnidade')->willReturn('');
-    $this->assertEquals('',$u->setUnidade('23456'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setUnidade('23456');
+		$id = $this->atendente->getUnidade();
+		$this->assertEquals($id, '23456');
   }
 
   public function testAtendenteUnidadeNome()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getUnidadeNome')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getUnidadeNome());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setUnidadeNome')->willReturn('');
-    $this->assertEquals('',$u->setUnidadeNome('dsadadsa'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setUnidadeNome('dsadadsa');
+		$id = $this->atendente->getUnidadeNome();
+		$this->assertEquals($id, 'dsadadsa');
   }
 
   public function testAtendenteLogradouro()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getLogradouro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getLogradouro());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setLogradouro')->willReturn('');
-    $this->assertEquals('',$u->setLogradouro('dsadsadsadsadsa'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setLogradouro('dsadsadsadsadsa');
+		$id = $this->atendente->getLogradouro();
+		$this->assertEquals($id, 'dsadsadsadsadsa');
   }
 
   public function testAtendenteBairro()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getBairro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getBairro());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setBairro')->willReturn('');
-    $this->assertEquals('',$u->setBairro('dsadsadsa'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setBairro('dsadsadsa');
+		$id = $this->atendente->getBairro();
+		$this->assertEquals($id, 'dsadsadsa');
   }
 
   public function testAtendenteCep()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getCep')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCep());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setCep')->willReturn('');
-    $this->assertEquals('',$u->setCep(74000-000));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setCep('74000-000');
+		$id = $this->atendente->getCep();
+		$this->assertEquals($id, '74000-000');
   }
 
   public function testAtendenteCidade()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getCidade')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCidade());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setCidade')->willReturn('');
-    $this->assertEquals('',$u->setCidade('Goiânia'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setCidade('Goiania');
+		$id = $this->atendente->getCidade();
+		$this->assertEquals($id, 'Goiania');
   }
 
   public function testAtendenteUf()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getUf')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getUf());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setUf')->willReturn('');
-    $this->assertEquals('',$u->setUf('GO'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setUf('GO');
+		$id = $this->atendente->getUf();
+		$this->assertEquals($id, 'GO');
   }
 
   public function testAtendenteComplemento()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getComplemento')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getComplemento());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setComplemento')->willReturn('');
-    $this->assertEquals('',$u->setComplemento('dsadsadsa'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setComplemento('dsadsadsa');
+		$id = $this->atendente->getComplemento();
+		$this->assertEquals($id, 'dsadsadsa');
   }
 
   public function testAtendenteTelefone()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getTelefone')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getTelefone());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setTelefone')->willReturn('');
-    $this->assertEquals('',$u->setTelefone('(66)99998-9999'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setTelefone('(66)99998-9999');
+		$id = $this->atendente->getTelefone();
+		$this->assertEquals($id, '(66)99998-9999');
   }
 
   public function testAtendenteEmail()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getEmail')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getEmail());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setEmail')->willReturn('');
-    $this->assertEquals('',$u->setEmail('test@test.com.br'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setEmail('test@test.com.br');
+		$id = $this->atendente->getEmail();
+		$this->assertEquals($id, 'test@test.com.br');
   }
 
   public function testAtendenteDataCadastro()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getDataCadastro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getDataCadastro());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setDataCadastro')->willReturn('');
-    $this->assertEquals('',$u->setDataCadastro('17/10/2017'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setDataCadastro('17/10/2017');
+		$id = $this->atendente->getDataCadastro();
+		$this->assertEquals($id, '17/10/2017');
   }
 
 }
