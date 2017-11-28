@@ -40,13 +40,10 @@ class AtendenteTest extends TestCase
 
   public function testAtendenteNome()
   {
-    $u = $this->createMock(Atendente::class);
-    $u->method('getNome')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getNome());
-
-    $u = $this->createMock(Atendente::class);
-    $u->method('setNome')->willReturn('');
-    $this->assertEquals('',$u->setNome('dsadsadsa'));
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->atendente->setNome('Maria');
+		$id = $this->atendente->getNome();
+		$this->assertEquals($id, 'Maria');
   }
 
   public function testAtendenteCpf()
