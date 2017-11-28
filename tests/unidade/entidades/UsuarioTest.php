@@ -4,56 +4,56 @@ use PHPUnit\Framework\TestCase;
 use App\Models\Entidades\Usuario;
 
 /**
- *  
+ *
  */
 class UsuarioTest extends TestCase
 {
 
+  private $usuario;
+
+	public function __construct()
+	{
+			$this->usuario = new Usuario();
+			parent::__construct();
+	}
+
+	public function testInstanceAtendente()
+	{
+			$this->usuario = new Usuario();
+			$this->assertInstanceOf(Usuario::class, $this->usuario);
+	}
+
+
   public function testUsuarioId( )
   {
-    $u = $this->createMock(Usuario::class);
-
-    $u->method('getId')->willReturn(NULL);
-
-    $this->assertEquals(NULL, $u->getId());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setId')->willReturn('');
-    $this->assertEquals('',$u->setId(123));
-
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setId(123);
+		$usu = $this->usuario->getId();
+		$this->assertEquals($usu, 123);
   }
 
   public function testUsuarioNome()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getNome')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getNome());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setNome')->willReturn('');
-    $this->assertEquals('',$u->setNome('dsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setNome('dsadsadsa');
+		$usu = $this->usuario->getNome();
+		$this->assertEquals($usu, 'dsadsadsa');
   }
 
   public function testUsuarioSenha()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getSenha')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getSenha());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setSenha')->willReturn('');
-    $this->assertEquals('',$u->setSenha(123));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setSenha('123');
+		$usu = $this->usuario->getSenha();
+		$this->assertEquals($usu, '123');
   }
 
   public function testUsuarioCpf()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getCpf')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCpf());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setCpf')->willReturn('');
-    $this->assertEquals('',$u->setCpf('123.123.123-12'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setCpf('123.123.123-12');
+		$usu = $this->usuario->getCpf();
+		$this->assertEquals($usu, '123.123.123-12');
   }
 
   public function testUsuarioDataNascimento()
@@ -69,112 +69,82 @@ class UsuarioTest extends TestCase
 
   public function testUsuarioLogradouro()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getLogradouro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getLogradouro());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setLogradouro')->willReturn('');
-    $this->assertEquals('',$u->setLogradouro('dsadsadsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setLogradouro('dsadsadsadsadsa');
+		$usu = $this->usuario->getLogradouro();
+		$this->assertEquals($usu, 'dsadsadsadsadsa');
   }
 
   public function testUsuarioBairro()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getBairro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getBairro());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setBairro')->willReturn('');
-    $this->assertEquals('',$u->setBairro('dsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setBairro('dsadsadsa');
+		$usu = $this->usuario->getBairro();
+		$this->assertEquals($usu, 'dsadsadsa');
   }
 
   public function testUsuarioCep()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getCep')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCep());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setCep')->willReturn('');
-    $this->assertEquals('',$u->setCep(74000-000));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setCep('74000-000');
+		$usu = $this->usuario->getCep();
+		$this->assertEquals($usu, '74000-000');
   }
 
   public function testUsuarioCidade()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getCidade')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCidade());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setCidade')->willReturn('');
-    $this->assertEquals('',$u->setCidade('Goiânia'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setCidade('Goiania');
+		$usu = $this->usuario->getCidade();
+		$this->assertEquals($usu, 'Goiania');
   }
 
   public function testUsuarioUf()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getUf')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getUf());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setUf')->willReturn('');
-    $this->assertEquals('',$u->setUf('GO'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setUf('GO');
+		$usu = $this->usuario->getUf();
+		$this->assertEquals($usu, 'GO');
   }
 
   public function testUsuarioComplemento()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getComplemento')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getComplemento());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setComplemento')->willReturn('');
-    $this->assertEquals('',$u->setComplemento('dsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setComplemento('dsadsadsa');
+		$usu = $this->usuario->getComplemento();
+		$this->assertEquals($usu, 'dsadsadsa');
   }
 
   public function testUsuarioTelefone()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getTelefone')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getTelefone());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setTelefone')->willReturn('');
-    $this->assertEquals('',$u->setTelefone('(66)99998-9999'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setTelefone('(66)99998-9999');
+		$usu = $this->usuario->getTelefone();
+		$this->assertEquals($usu, '(66)99998-9999');
   }
 
   public function testUsuarioEmail()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getEmail')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getEmail());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setEmail')->willReturn('');
-    $this->assertEquals('',$u->setEmail('test@test.com.br'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setEmail('test@test.com.br');
+		$usu = $this->usuario->getEmail();
+		$this->assertEquals($usu, 'test@test.com.br');
   }
 
   public function testUsuarioNomeMae()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getNomeMae')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getNomeMae());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setNomeMae')->willReturn('');
-    $this->assertEquals('',$u->setNomeMae('dsadsadsadsadsadsadsadsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->usuario->setNomeMae('adsadsadsad');
+		$usu = $this->usuario->getNomeMae();
+		$this->assertEquals($usu, 'adsadsadsad');
   }
 
   public function testUsuarioInformacoes()
   {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getInformacoes')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getInformacoes());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setInformacoes')->willReturn('');
-    $this->assertEquals('',$u->setInformacoes('dsadsadsadsadsadsadsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+    $this->usuario->setInformacoes('dsadsadsadsadsadsadsadsadsa');
+    $usu = $this->usuario->getInformacoes();
+    $this->assertEquals($usu, 'dsadsadsadsadsadsadsadsadsa');
   }
 
   public function testUsuarioDataCadastro()
