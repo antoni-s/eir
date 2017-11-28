@@ -8,19 +8,33 @@ use App\Models\Validacao\ResultadoValidacao;
 
 class ResultadoValidacaoTest extends TestCase
 {
+  private $resultadoValidacao;
+
+	public function __construct()
+	{
+			$this->resultadoValidacao = new ResultadoValidacao();
+			parent::__construct();
+	}
+
+	public function testInstanceResultadoValidacao()
+	{
+			$this->resultadoValidacao = new ResultadoValidacao();
+			$this->assertInstanceOf(ResultadoValidacao::class, $this->resultadoValidacao);
+	}
+
+
 
   public function testResultadoValidacaoGet()
   {
-    $u = $this->createMock(ResultadoValidacao::class);
-    $u->method('getErros')->willReturn(NULL);
-    $this->assertEquals(NULL,$u->getErros());
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$resul = $this->resultadoValidacao->getErros();
+		$this->assertEquals($resul, NULL);
   }
 
   public function testResultadoValidacaoAddErro()
   {
-    $u = $this->createMock(ResultadoValidacao::class);
-    $u->method('addErro')->willReturn('');
-    $this->assertEquals('',$u->addErro(0,404));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->resultadoValidacao->setId(0,404);
   }
 
 }
