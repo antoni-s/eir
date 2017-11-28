@@ -72,13 +72,10 @@ class MedicamentoTest extends TestCase
 
   public function testMedicamentoDataAtualizacao( )
   {
-    $m = $this->createMock(Medicamento::class);
-    $m->method('getDataAtualizacao')->willReturn(NULL);
-    $this->assertEquals(NULL, $m->getDataAtualizacao());
-
-    $m = $this->createMock(Medicamento::class);
-    $m->method('setDataAtualizacao')->willReturn('');
-    $this->assertEquals('', $m->setDataAtualizacao('14/03/2016'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->medicamento->setDataAtualizacao('131017');
+		$med = $this->medicamento->getDataAtualizacao();
+		$this->assertEquals($med, '131017');
   }
 
 }
