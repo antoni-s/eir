@@ -70,13 +70,6 @@ class MedicamentoTest extends TestCase
 		$this->assertEquals($med, 'dsa');
   }
 
-  public function testMedicamentoData( )
-  {
-    fwrite(STDOUT, __METHOD__ . "\n");
-		$med = $this->medicamento->getDataAtualizacao();
-		$this->assertEquals($med, NULL);
-  }
-
 }
 
 
