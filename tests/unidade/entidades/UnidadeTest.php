@@ -6,135 +6,112 @@ use App\Models\Entidades\Unidade;
 //include_once __DIR__.'/../../../App/Models/Entidades/Unidade.php';
 
 /**
- * 
+ *
  */
 
 class UnidadeTest extends TestCase
 {
 
+  private $unidade;
+
+	public function __construct()
+	{
+			$this->unidade = new Unidade();
+			parent::__construct();
+	}
+
+	public function testInstanceAtendente()
+	{
+			$this->unidade = new Unidade();
+			$this->assertInstanceOf(Unidade::class, $this->unidade);
+	}
 
   public function testUnidadeId( )
   {
-    $u = $this->createMock(Unidade::class);
-
-    $u->method('getId')->willReturn(NULL);
-
-    $this->assertEquals(NULL, $u->getId());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setId')->willReturn('');
-    $this->assertEquals('',$u->setId(123));
-
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setId(123);
+		$uni = $this->unidade->getId();
+		$this->assertEquals($uni, 123);
   }
 
   public function testUnidadeNome()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getNome')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getNome());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setNome')->willReturn('');
-    $this->assertEquals('',$u->setNome('dsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setNome('dsadsadsa');
+		$uni = $this->unidade->getNome();
+		$this->assertEquals($uni, 'dsadsadsa');
   }
 
   public function testUnidadeIdu()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getIdu')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getIdu());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setIdu')->willReturn('');
-    $this->assertEquals('',$u->setIdu(123));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setIdu('123');
+		$uni = $this->unidade->getIdu();
+		$this->assertEquals($uni, '123');
   }
 
   public function testUnidadeLogradouro()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getLogradouro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getLogradouro());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setLogradouro')->willReturn('');
-    $this->assertEquals('',$u->setLogradouro('dsadsadsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setLogradouro('dsadsadsadsadsa');
+		$uni = $this->unidade->getLogradouro();
+		$this->assertEquals($uni, 'dsadsadsadsadsa');
   }
 
   public function testUnidadeBairro()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getBairro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getBairro());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setBairro')->willReturn('');
-    $this->assertEquals('',$u->setBairro('dsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setBairro('dsadsadsa');
+		$uni = $this->unidade->getBairro();
+		$this->assertEquals($uni, 'dsadsadsa');
   }
 
   public function testUnidadeCep()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getCep')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCep());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setCep')->willReturn('');
-    $this->assertEquals('',$u->setCep(74000-000));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setCep('74000-000');
+		$uni = $this->unidade->getCep();
+		$this->assertEquals($uni, '74000-000');
   }
 
   public function testUnidadeCidade()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getCidade')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getCidade());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setCidade')->willReturn('');
-    $this->assertEquals('',$u->setCidade('Goiânia'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setCidade('Goiania');
+		$uni = $this->unidade->getCidade();
+		$this->assertEquals($uni, 'Goiania');
   }
 
   public function testUnidadeUf()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getUf')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getUf());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setUf')->willReturn('');
-    $this->assertEquals('',$u->setUf('GO'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setUf('GO');
+		$uni = $this->unidade->getUf();
+		$this->assertEquals($uni, 'GO');
   }
 
   public function testUnidadeComplemento()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getComplemento')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getComplemento());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setComplemento')->willReturn('');
-    $this->assertEquals('',$u->setComplemento('dsadsadsa'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setComplemento('dsadsadsa');
+		$uni = $this->unidade->getComplemento();
+		$this->assertEquals($uni, 'dsadsadsa');
   }
 
   public function testUnidadeHoraAbertura()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getHoraAbertura')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getHoraAbertura());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setHoraAbertura')->willReturn('');
-    $this->assertEquals('',$u->setHoraAbertura('10:00'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setHoraAbertura('10:00');
+		$uni = $this->unidade->getHoraAbertura();
+		$this->assertEquals($uni, '10:00');
   }
 
   public function testUnidadeHoraFechamento()
   {
-    $u = $this->createMock(Unidade::class);
-    $u->method('getHoraFechamento')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getHoraFechamento());
-
-    $u = $this->createMock(Unidade::class);
-    $u->method('setHoraFechamento')->willReturn('');
-    $this->assertEquals('',$u->setHoraFechamento('17:00'));
+    fwrite(STDOUT, __METHOD__ . "\n");
+		$this->unidade->setHoraFechamento('17:00');
+		$uni = $this->unidade->getHoraFechamento();
+		$this->assertEquals($uni, '17:00');
   }
 
   public function testUnidadeDataCadastro()
