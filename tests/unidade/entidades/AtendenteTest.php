@@ -145,9 +145,9 @@ class AtendenteTest extends TestCase
   public function testAtendenteDataCadastro()
   {
 		fwrite(STDOUT, __METHOD__ . "\n");
-		$this->atendente->setDataCadastro('17/10/2017');
+		$this->atendente->setDataCadastro('17102017');
 		$id = $this->atendente->getDataCadastro();
-		$this->assertEquals($id, '17/10/2017');
+		$this->assertEquals($id, '17102017');
   }
 
 }
