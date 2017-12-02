@@ -37,7 +37,7 @@ class ResultadoValidacaoTest extends TestCase
   {
     fwrite(STDOUT, __METHOD__ . "\n");
 		$this->resultadoValidacao->setId(0,404);
-  }
+  }   
 
 }
 
