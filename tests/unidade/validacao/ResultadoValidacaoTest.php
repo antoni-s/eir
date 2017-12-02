@@ -36,7 +36,7 @@ class ResultadoValidacaoTest extends TestCase
   public function testResultadoValidacaoAddErro()
   {
     fwrite(STDOUT, __METHOD__ . "\n");
-		$this->resultadoValidacao->addErro(0,404);
+		$this->resultadoValidacao->addErro('nome',"Nome: Este campo não pode ser vazio");
   }
 
 }
