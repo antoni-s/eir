@@ -30,6 +30,7 @@ class ResultadoValidacaoTest extends TestCase
 		$resul = $this->resultadoValidacao->getErros();
 		$this->assertEquals($resul, NULL);
   }
+  */
 
 
   public function testResultadoValidacaoAddErro()
@@ -38,7 +39,6 @@ class ResultadoValidacaoTest extends TestCase
 		$this->resultadoValidacao->setId(0,404);
   }
 
-*/
 }
 
 
