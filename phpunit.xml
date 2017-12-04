@@ -38,6 +38,7 @@
 								<directory>./App/Views</directory>
 								<directory>./App/Controllers</directory>
 								<directory>./App/Models/DAO</directory>
+								<directory>./App/Models/Validacao</directory>
 								<directory>./App/Lib</directory>
 								<directory>./mysql</directory>
 								<file>./App/App.php</file>
