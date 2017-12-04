@@ -70,6 +70,14 @@ class MedicamentoTest extends TestCase
 		$this->assertEquals($med, 'dsa');
   }
 
+	public function testMedicamentoInformacoes( )
+	{
+		fwrite(STDOUT, __METHOD__ . "\n");
+		$this->medicamento->setInformacoes('dssdd');
+		$med = $this->medicamento->getInformacoes();
+		$this->assertEquals($med, 'dssdd');
+	}
+
 }
 
 
