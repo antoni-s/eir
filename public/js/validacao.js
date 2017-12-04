@@ -105,55 +105,23 @@ $(document).ready(function() {
         }
     });
 
-    $('#form_cadastro_atendente').validate({
+		$('#form_login').validate({
         rules: {
-            nome: {
-                required: true
-            },
-            cpf: {
-                required: true
-            },
-            matricula: {
-                required: true
-            },
-            unidade: {
-                verificaUnidade: true,
-                required: true
-            },
-            telefone: {
-                required: true
-            },
             email: {
                 required: true
             },
-            logradouro: {
-                required: true
-            },
-            bairro: {
-                required: true
-            },
-            complemento: {
-                required: true
-            },
-            cep: {
-                required: true,
-                maxlength: false
-            },
-            cidade: {
-                required: true
-            },
-            uf: {
+            password: {
                 required: true
             }
         },
         highlight: function(element) {
-            $(element).closest('.form-group').addClass('has-error');
+            $(element).closest('.form-group').addClass('has-danger');
         },
         unhighlight: function(element) {
-            $(element).closest('.form-group').removeClass('has-error');
+            $(element).closest('.form-group').removeClass('has-danger');
         },
         errorElement: 'span',
-        errorClass: 'help-block',
+        errorClass: 'text-danger',
         errorPlacement: function(error, element) {
             if (element.parent('.input-group').length) {
                 error.insertAfter(element.parent());
@@ -162,37 +130,10 @@ $(document).ready(function() {
             }
         },
         messages: {
-            nome: {
-                required: "Este campo não pode ser vazio"
-            },
-            cpf: {
-                required: "Este campo não pode ser vazio"
-            },
-            matricula: {
-                required: "Este campo não pode ser vazio"
-            },
-            telefone: {
-                required: "Este campo não pode ser vazio"
-            },
             email: {
                 required: "Este campo não pode ser vazio"
             },
-            logradouro: {
-                required: "Este campo não pode ser vazio"
-            },
-            bairro: {
-                required: "Este campo não pode ser vazio"
-            },
-            complemento: {
-                required: "Este campo não pode ser vazio"
-            },
-            cidade: {
-                required: "Este campo não pode ser vazio"
-            },
-            uf: {
-                required: "Este campo não pode ser vazio"
-            },
-            cep: {
+            password: {
                 required: "Este campo não pode ser vazio"
             }
         }
