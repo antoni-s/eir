@@ -4,6 +4,19 @@ namespace App\Lib;
 
 class Sessao
 {
+		public static function iniciarSessao($id, $nome, $tipo){
+				$_SESSION['user'] = [ "id" => $id, "nome" => $nome, "tipo" => $tipo];
+				// $_SESSION['tipo'] = $tipo;
+		}
+
+		public static function retornaSessao(){
+				return ($_SESSION['user']) ? $_SESSION['user'] : "";
+		}
+
+		public static function encerrarSessao(){
+				unset($_SESSION['user']);
+		}
+
     public static function gravaMensagem($mensagem){
         $_SESSION['mensagem'] = $mensagem;
     }

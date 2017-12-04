@@ -10,7 +10,6 @@ class Usuario
     private $nome;
     private $senha;
     private $cpf;
-    private $dataNascimento;
     private $logradouro;
     private $bairro;
     private $cep;
@@ -21,7 +20,6 @@ class Usuario
     private $email;
     private $nomeMae;
     private $informacoes;
-    private $dataCadastro;
 
     public function getId()
     {
@@ -61,16 +59,6 @@ class Usuario
     public function setCpf($cpf)
     {
         $this->cpf = $cpf;
-    }
-
-    public function getDataNascimento()
-    {
-        return new DateTime($this->dataNascimento);
-    }
-
-    public function setDataNascimento($dataNascimento)
-    {
-        $this->dataNascimento = $dataNascimento;
     }
 
     public function getLogradouro()
@@ -173,13 +161,4 @@ class Usuario
         $this->informacoes = $informacoes;
     }
 
-    public function getDataCadastro()
-    {
-        return new DateTime($this->dataCadastro);
-    }
-
-    public function setDataCadastro($dataCadastro)
-    {
-        $this->dataCadastro = $dataCadastro;
-    }
 }

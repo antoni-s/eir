@@ -78,7 +78,6 @@ class UsuarioDAO extends BaseDAO
             $nome           = $usuario->getNome();
             $cpf            = $usuario->getCpf();
             $senha          = $usuario->getSenha();
-            $dataNascimento = $usuario->getDataNascimento();
             $logradouro     = $usuario->getLogradouro();
             $bairro         = $usuario->getBairro();
             $cep            = $usuario->getCep();
@@ -95,14 +94,13 @@ class UsuarioDAO extends BaseDAO
             return $this->insert(
                 'usuario',
                 // ":nome,:status,:preco,:unidade,:ean,:descricao",
-                ":nome,:cpf,:senha,:dataNascimento,:logradouro,:bairro,:cep,
+                ":nome,:cpf,:senha,:logradouro,:bairro,:cep,
                 :cidade,:uf,:complemento,
                 :telefone,:email,:nomeMae,:informacoes",
                 [
                     ':nome'=>$nome,
                     ':cpf'=>$cpf,
                     ':senha'=>$senha,
-                    ':dataNascimento'=>$dataNascimento,
                     ':logradouro'=>$logradouro,
                     ':bairro'=>$bairro,
                     ':cep'=>$cep,
@@ -129,7 +127,6 @@ class UsuarioDAO extends BaseDAO
             $nome           = $usuario->getNome();
             $cpf            = $usuario->getCpf();
             $senha          = $usuario->getSenha();
-            $dataNascimento = $usuario->getDataNascimento();
             $logradouro     = $usuario->getLogradouro();
             $bairro         = $usuario->getBairro();
             $cep            = $usuario->getCep();
@@ -146,7 +143,7 @@ class UsuarioDAO extends BaseDAO
             return $this->update(
                 'usuario',
                 // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
-                "nome = :nome, cpf = :cpf, senha = :senha, dataNascimento = :dataNascimento,
+                "nome = :nome, cpf = :cpf, senha = :senha,
                   logradouro = :logradouro, bairro = :bairro, cep = :cep,
                   cidade = :cidade, uf = :uf, complemento = :complemento,
                   telefone = :telefone, email = :email, nomeMae = :nomeMae,
@@ -156,7 +153,6 @@ class UsuarioDAO extends BaseDAO
                     ':nome'=>$nome,
                     ':cpf'=>$cpf,
                     ':senha'=>$senha,
-                    ':dataNascimento'=>$dataNascimento,
                     ':logradouro'=>$logradouro,
                     ':bairro'=>$bairro,
                     ':cep'=>$cep,

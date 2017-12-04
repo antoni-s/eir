@@ -1,3 +1,4 @@
+<div class="wrapper">
 <div class="container">
     <div class="row">
         <div class="col-md-3"></div>
@@ -65,7 +66,7 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="nomeMae">Cidade</label>
+                    <label for="nomeMae">Nome da Mãe</label>
                     <input type="text" class="form-control" name="nomeMae" placeholder="Nome da Mãe do Usuário" value="<?php echo $Sessao::retornaValorFormulario('nomeMae'); ?>" required>
 
                 </div>
@@ -112,4 +113,5 @@
         </div>
         <div class=" col-md-3"></div>
     </div>
+</div>
 </div>

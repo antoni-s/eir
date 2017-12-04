@@ -8,7 +8,6 @@ class Medicamento
 {
     private $id;
     private $nome;
-    private $codigoBarras;
     private $composicao;
     private $tipo;
     private $dose;
@@ -35,15 +34,15 @@ class Medicamento
         $this->nome = $nome;
     }
 
-    public function getCodigoBarras()
-    {
-        return $this->codigoBarras;
-    }
+		public function getCodigo()
+		{
+				return $this->codigo;
+		}
 
-    public function setCodigoBarras($codigoBarras)
-    {
-        $this->codigoBarras = $codigoBarras;
-    }
+		public function setCodigo($codigo)
+		{
+				$this->codigo = $codigo;
+		}
 
     public function getComposicao()
     {
@@ -74,6 +73,16 @@ class Medicamento
     {
         $this->dose = $dose;
     }
+
+		public function getInformacoes()
+		{
+				return $this->informacoes;
+		}
+
+		public function setInformacoes($informacoes)
+		{
+				$this->informacoes = $informacoes;
+		}
 
     public function getDataAtualizacao()
     {

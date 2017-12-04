@@ -16,17 +16,18 @@ class MedicamentoValidador{
             $resultadoValidacao->addErro('nome',"Nome: Este campo não pode ser vazio");
         }
 
-        if(empty($medicamento->getCodigoBarras()))
-        {
-            $resultadoValidacao->addErro('codigoBarras',"Código de Barras: Este campo não pode ser vazio");
-        }
 
         if(empty($medicamento->getComposicao()))
         {
             $resultadoValidacao->addErro('composicao',"Composição: Este campo não pode ser vazio");
         }
 
-        if(empty($medicamento->getTipo()) || $medicamento->getUnidade() == -1)
+				if(empty($medicamento->getCodigo()))
+				{
+						$resultadoValidacao->addErro('codigo',"Código: Este campo não pode ser vazio");
+				}
+
+        if(empty($medicamento->getTipo()))
         {
             $resultadoValidacao->addErro('tipo',"Tipo: Este campo não pode ser vazio");
         }

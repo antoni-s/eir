@@ -1,4 +1,4 @@
-Medicamento<?php
+<?php
 
 namespace App\Controllers;
 
@@ -52,7 +52,7 @@ class MedicamentoController extends Controller
     {
         $Medicamento = new Medicamento();
         $Medicamento->setNome($_POST['nome']);
-        $Medicamento->setCodigoBarras($_POST['codigoBarras']);
+				$Medicamento->setCodigo($_POST['codigo']);
         $Medicamento->setComposicao($_POST['composicao']);
         $Medicamento->setTipo($_POST['tipo']);
         $Medicamento->setDose($_POST['dose']);
@@ -70,9 +70,9 @@ class MedicamentoController extends Controller
 
         $medicamentoDAO = new MedicamentoDAO();
 
-        if($medicamentoDAO->validaCodigoBarras($Medicamento->getCodigoBarras()))
+        if($medicamentoDAO->validaCodigo($Medicamento->getCodigo()))
         {
-            Sessao::gravaErro(['Código de barras já existe.']);
+            Sessao::gravaErro(['Código já existe.']);
             $this->redirect('/medicamento/cadastro');
         }
 
@@ -115,7 +115,7 @@ class MedicamentoController extends Controller
         $Medicamento = new Medicamento();
         $Medicamento->setId($_POST['id']);
         $Medicamento->setNome($_POST['nome']);
-        $Medicamento->setCodigoBarras($_POST['codigoBarras']);
+				$Medicamento->setCodigo($_POST['codigo']);
         $Medicamento->setComposicao($_POST['composicao']);
         $Medicamento->setTipo($_POST['tipo']);
         $Medicamento->setDose($_POST['dose']);

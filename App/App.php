@@ -18,15 +18,24 @@ class App
         /*
          * Constantes do sistema
          */
-        $url_db = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        define('APP_HOST'       , $_SERVER['HTTP_HOST']);
-        define('PATH'           , realpath('./'));
-        define('TITLE'          , "EIR");
-        define('DB_HOST'        , $url_db["host"]);
-        define('DB_USER'        , $url_db["user"]);
-        define('DB_PASSWORD'    , $url_db["pass"]);
-        define('DB_NAME'        , substr($url_db["path"], 1));
-        define('DB_DRIVER'      , "mysql");
+        // $url_db = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        // define('APP_HOST'       , $_SERVER['HTTP_HOST']);
+        // define('PATH'           , realpath('./'));
+        // define('TITLE'          , "EIR");
+        // define('DB_HOST'        , $url_db["host"]);
+        // define('DB_USER'        , $url_db["user"]);
+        // define('DB_PASSWORD'    , $url_db["pass"]);
+        // define('DB_NAME'        , substr($url_db["path"], 1));
+        // define('DB_DRIVER'      , "mysql");
+
+				define('APP_HOST'       , $_SERVER['HTTP_HOST']);
+				define('PATH'           , realpath('./'));
+				define('TITLE'          , "EIR");
+				define('DB_HOST'        , "us-cdbr-iron-east-05.cleardb.net");
+				define('DB_USER'        , "b8ec5c2ca3167f");
+				define('DB_PASSWORD'    , "8d02c827");
+				define('DB_NAME'        , "heroku_64ec334722ebe23");
+				define('DB_DRIVER'      , "mysql");
 
         $this->url();
     }

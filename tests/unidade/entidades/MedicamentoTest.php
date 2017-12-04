@@ -38,11 +38,11 @@ class MedicamentoTest extends TestCase
 		$this->assertEquals($med, 'dsadsadsa');
   }
 
-  public function testMedicamentoCodigoBarras( )
+  public function testMedicamentoCodigo( )
   {
     fwrite(STDOUT, __METHOD__ . "\n");
-		$this->medicamento->setCodigoBarras('123456789');
-		$med = $this->medicamento->getCodigoBarras();
+		$this->medicamento->setCodigo('123456789');
+		$med = $this->medicamento->getCodigo();
 		$this->assertEquals($med, '123456789');
   }
 

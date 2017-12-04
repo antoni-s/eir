@@ -16,7 +16,7 @@ class MedicamentoDAO extends BaseDAO
 
         // LIKE '%$buscaMedicamento%' OR descricao
         $whereBusca = " WHERE nome
-                                LIKE '%$buscaMedicamento%' OR codigoBarras = '$buscaMedicamento'
+                                LIKE '%$buscaMedicamento%' OR codigo = '$buscaMedicamento'
                          ";
 
         $resultadoTotal = $this->select(
@@ -39,11 +39,11 @@ class MedicamentoDAO extends BaseDAO
                 'resultado'         => $resultado->fetchAll(\PDO::FETCH_CLASS, Medicamento::class)];
 
     }
-    public  function validaCodigoBarras($codigoBarras)
+    public  function validaCodigo($codigo)
     {
-        if($codigoBarras) {
+        if($codigo) {
             $resultado = $this->select(
-                "SELECT count(*) as total FROM medicamento WHERE codigoBarras = '$codigoBarras'"
+                "SELECT count(*) as total FROM medicamento WHERE codigo = '$codigo'"
             );
 
             return $resultado->fetch()['total'];
@@ -76,7 +76,7 @@ class MedicamentoDAO extends BaseDAO
         try {
 
             $nome           = $medicamento->getNome();
-            $codigoBarras   = $medicamento->getCodigoBarras();
+            $codigo   			= $medicamento->getCodigo();
             $composicao     = $medicamento->getComposicao();
             $tipo           = $medicamento->getTipo();
             $dose           = $medicamento->getDose();
@@ -85,10 +85,10 @@ class MedicamentoDAO extends BaseDAO
             return $this->insert(
                 'medicamento',
                 // ":nome,:status,:preco,:unidade,:ean,:descricao",
-                ":nome,:codigoBarras,:composicao,:tipo,:dose,:informacoes",
+                ":nome,:codigo,:composicao,:tipo,:dose,:informacoes",
                 [
                     ':nome'=>$nome,
-                    ':codigoBarras'=>$codigoBarras,
+                    ':codigo'=>$codigo,
                     ':composicao'=>$composicao,
                     ':tipo'=>$tipo,
                     ':dose'=>$dose,
@@ -106,7 +106,7 @@ class MedicamentoDAO extends BaseDAO
         try {
 
             $nome           = $medicamento->getNome();
-            $codigoBarras   = $medicamento->getCodigoBarras();
+						$codigo   			= $medicamento->getCodigo();
             $composicao     = $medicamento->getComposicao();
             $tipo           = $medicamento->getTipo();
             $dose           = $medicamento->getDose();
@@ -115,12 +115,12 @@ class MedicamentoDAO extends BaseDAO
             return $this->update(
                 'medicamento',
                 // "nome = :nome,status = :status, preco = :preco, unidade = :unidade, ean = :ean, descricao = :descricao",
-                "nome = :nome, codigoBarras = :codigoBarras, composicao = :composicao, tipo = :tipo,
+                "nome = :nome, codigo = :codigo, composicao = :composicao, tipo = :tipo,
                   dose = :dose, informacoes = :informacoes",
                 [
                     ':id'=>$id,
                     ':nome'=>$nome,
-                    ':codigoBarras'=>$codigoBarras,
+										':codigo'=>$codigo,
                     ':composicao'=>$composicao,
                     ':tipo'=>$tipo,
                     ':dose'=>$dose,

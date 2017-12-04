@@ -13,6 +13,7 @@ class UnidadeController extends Controller
 {
     public function index($params)
     {
+
         $unidadeDAO = new UnidadeDAO();
 
         $paginaSelecionada  = isset($_GET['paginaSelecionada']) ? $_GET['paginaSelecionada'] : 1;
@@ -39,6 +40,17 @@ class UnidadeController extends Controller
 
     public function cadastro()
     {
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/home');
+				}
+
         $this->render('/unidade/cadastro');
 
         Sessao::limpaFormulario();
@@ -48,6 +60,16 @@ class UnidadeController extends Controller
 
     public function salvar()
     {
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/home');
+				}
+
         $Unidade = new Unidade();
         $Unidade->setNome($_POST['nome']);
         // $Unidade->setStatus($_POST['status']);
@@ -94,7 +116,18 @@ class UnidadeController extends Controller
 
     public function edicao($params)
     {
-        $id = $params[0];
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/home');
+				}
+
+			  $id = $params[0];
 
         $unidadeDAO = new UnidadeDAO();
 
@@ -117,6 +150,16 @@ class UnidadeController extends Controller
 
     public function atualizar()
     {
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/home');
+				}
 
         $Unidade = new Unidade();
         $Unidade->setId($_POST['id']);
@@ -168,6 +211,17 @@ class UnidadeController extends Controller
 
     public function exclusao($params)
     {
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/home');
+				}
+
         $id = $params[0];
 
         $unidadeDAO = new UnidadeDAO();
@@ -190,6 +244,17 @@ class UnidadeController extends Controller
 
     public function excluir()
     {
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/home');
+				}
+
         $Unidade = new Unidade();
         $Unidade->setId($_POST['id']);
 
@@ -202,7 +267,7 @@ class UnidadeController extends Controller
 
         Sessao::gravaMensagem("Unidade excluida com sucesso!");
 
-        $this->redirect('/unidade/');
+        $this->redirect('/unidade');
 
     }
 }

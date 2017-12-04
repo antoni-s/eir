@@ -16,12 +16,27 @@ class UsuarioController extends Controller
 {
     public function index($params)
     {
+
+				// Controle de acesso
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					$this->redirect('/usuario/edicao/'.$user['id']);
+				}
+
+				// ---------------------
+
         $usuarioDAO = new UsuarioDAO();
 
         $paginaSelecionada  = isset($_GET['paginaSelecionada']) ? $_GET['paginaSelecionada'] : 1;
         $totalPorPagina     = 6;
 
-        if(isset($_GET['buscaUsuario'])){
+        // if(isset($_GET['buscaUsuario'])){
 
             $listaUsuarios      = $usuarioDAO->buscaComPaginacao($_GET['buscaUsuario'], $totalPorPagina, $paginaSelecionada);
 
@@ -33,7 +48,7 @@ class UsuarioController extends Controller
 
             self::setViewParam('listaUsuarios'  , $listaUsuarios['resultado']);
 
-        }
+        // }
 
         $this->render('/usuario/index');
 
@@ -55,7 +70,6 @@ class UsuarioController extends Controller
         $Usuario->setNome($_POST['nome']);
         $Usuario->setCpf($_POST['cpf']);
         $Usuario->setSenha($_POST['senha']);
-        $Usuario->setDataNascimento($_POST['dataNascimento']);
         $Usuario->setLogradouro($_POST['logradouro']);
         $Usuario->setBairro($_POST['bairro']);
         $Usuario->setCep($_POST['cep']);
@@ -99,6 +113,18 @@ class UsuarioController extends Controller
     {
         $id = $params[0];
 
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					if ($user['id'] != $id) {
+						$this->redirect('/home');
+					}
+				}
+
         $usuarioDAO = new UsuarioDAO();
 
         $usuario = $usuarioDAO->listar($id);
@@ -121,12 +147,23 @@ class UsuarioController extends Controller
     public function atualizar()
     {
 
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					if ($user['id'] != $_POST['id']) {
+						$this->redirect('/home');
+					}
+				}
+
         $Usuario = new Usuario();
         $Usuario->setId($_POST['id']);
         $Usuario->setNome($_POST['nome']);
         $Usuario->setCpf($_POST['cpf']);
         $Usuario->setSenha($_POST['senha']);
-        $Usuario->setDataNascimento($_POST['dataNascimento']);
         $Usuario->setLogradouro($_POST['logradouro']);
         $Usuario->setBairro($_POST['bairro']);
         $Usuario->setCep($_POST['cep']);
@@ -173,6 +210,18 @@ class UsuarioController extends Controller
     {
         $id = $params[0];
 
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					if ($user['id'] != $id) {
+						$this->redirect('/home');
+					}
+				}
+
         $usuarioDAO = new UsuarioDAO();
 
         $usuario = $usuarioDAO->listar($id);
@@ -193,6 +242,19 @@ class UsuarioController extends Controller
 
     public function excluir()
     {
+
+				$user = Sessao::retornaSessao();
+
+				if (!$user) {
+					$this->redirect('/home');
+				}
+
+				if ($user['tipo'] != 2) {
+					if ($user['id'] != $_POST['id']) {
+						$this->redirect('/home');
+					}
+				}
+
         $Usuario = new Usuario();
         $Usuario->setId($_POST['id']);
 
