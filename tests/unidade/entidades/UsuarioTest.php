@@ -56,16 +56,16 @@ class UsuarioTest extends TestCase
 		$this->assertEquals($usu, '123.123.123-12');
   }
 
-  public function testUsuarioDataNascimento()
-  {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getDataNascimento')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getDataNascimento());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setDataNascimento')->willReturn('');
-    $this->assertEquals('',$u->setDataNascimento('13/02/1998'));
-  }
+  // public function testUsuarioDataNascimento()
+  // {
+  //   $u = $this->createMock(Usuario::class);
+  //   $u->method('getDataNascimento')->willReturn(NULL);
+  //   $this->assertEquals(NULL, $u->getDataNascimento());
+  //
+  //   $u = $this->createMock(Usuario::class);
+  //   $u->method('setDataNascimento')->willReturn('');
+  //   $this->assertEquals('',$u->setDataNascimento('13/02/1998'));
+  // }
 
   public function testUsuarioLogradouro()
   {
@@ -147,16 +147,16 @@ class UsuarioTest extends TestCase
     $this->assertEquals($usu, 'dsadsadsadsadsadsadsadsadsa');
   }
 
-  public function testUsuarioDataCadastro()
-  {
-    $u = $this->createMock(Usuario::class);
-    $u->method('getDataCadastro')->willReturn(NULL);
-    $this->assertEquals(NULL, $u->getDataCadastro());
-
-    $u = $this->createMock(Usuario::class);
-    $u->method('setDataCadastro')->willReturn('');
-    $this->assertEquals('',$u->setDataCadastro('17102017'));
-  }
+  // public function testUsuarioDataCadastro()
+  // {
+  //   $u = $this->createMock(Usuario::class);
+  //   $u->method('getDataCadastro')->willReturn(NULL);
+  //   $this->assertEquals(NULL, $u->getDataCadastro());
+  //
+  //   $u = $this->createMock(Usuario::class);
+  //   $u->method('setDataCadastro')->willReturn('');
+  //   $this->assertEquals('',$u->setDataCadastro('17102017'));
+  // }
 }
 
  ?>
